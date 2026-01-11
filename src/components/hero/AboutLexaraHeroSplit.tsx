@@ -44,7 +44,7 @@ export default function AboutCodexHeroSplit() {
                         />
                     </div>
                 </motion.div>
-                
+
                 {/* Lado texto */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -55,21 +55,27 @@ export default function AboutCodexHeroSplit() {
                 >
                     {/* Título */}
                     <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-                        O CÓDEX nasceu de conversas reais entre amigos
+                        A LEXARA nasceu de conversas reais entre amigos
                     </h1>
 
                     {/* Origem */}
                     <p className="text-slate-300 text-base md:text-lg leading-relaxed">
-                        Antes de ser um site, o CÓDEX foi um grupo de WhatsApp.
-                        Um espaço onde filmes, séries, games e histórias sempre
-                        foram discutidos com curiosidade, respeito e paixão.
+                        Antes de existir como site, a <strong>LEXARA</strong> foi conversa,
+                        troca e curiosidade compartilhada. Surgiu em diálogos informais entre
+                        amigos que sempre encontraram no universo geek um ponto de conexão —
+                        um espaço onde filmes, séries, games e histórias eram debatidos sem
+                        disputas, sem rótulos e com respeito genuíno pelas diferentes visões
+                        que cada narrativa desperta.
                     </p>
 
                     {/* Propósito */}
-                    <p className="text-slate-400 text-sm md:text-base">
-                        Transformamos essas conversas em um lugar para revisitar
-                        clássicos, acompanhar lançamentos e entender por que
-                        certas histórias continuam vivas dentro da gente.
+                    <p className="text-slate-400 text-sm md:text-base leading-relaxed">
+                        Com o tempo, essas conversas pediram mais espaço. A LEXARA nasce
+                        justamente dessa necessidade de transformar diálogo em registro,
+                        opinião em reflexão e entusiasmo em conteúdo duradouro. Aqui,
+                        revisitamos clássicos que marcaram gerações, acompanhamos lançamentos
+                        com olhar crítico e buscamos entender por que certas histórias seguem
+                        vivas dentro da gente, atravessando o tempo e conectando pessoas.
                     </p>
 
                     {/* Quem está por trás */}
@@ -81,23 +87,27 @@ export default function AboutCodexHeroSplit() {
                             <strong>Emanuel José</strong> — Jornalismo
                         </p>
                         <p>
-                            <strong>Celso Lopes</strong> — Ciências da Computação
+                            <strong>Celso Lopes</strong> — Engenharia da Computação
                         </p>
                     </div>
 
                     {/* Compromisso */}
-                    <p className="text-slate-400 text-sm md:text-base pt-2">
-                        Aqui você não encontra conteúdo feito de qualquer jeito.
-                        Existe opinião e ponto de vista, mas também pesquisa,
-                        curiosidade, história e compromisso com qualidade.
+                    <p className="text-slate-400 text-sm md:text-base leading-relaxed pt-2">
+                        A LEXARA não existe para entregar conteúdo apressado ou superficial.
+                        Cada texto carrega ponto de vista, mas também pesquisa, contexto e
+                        responsabilidade. Nosso compromisso é com a qualidade, com a
+                        construção de conhecimento e com a valorização da cultura geek como
+                        algo que vai além do entretenimento — ela é memória, identidade e
+                        diálogo constante.
                     </p>
 
                     {/* Encerramento */}
                     <p className="text-slate-300 font-medium pt-2">
-                        Este espaço é nosso. E agora, também é seu.
+                        Este espaço nasceu entre amigos, cresceu com histórias e continua
+                        aberto para todos que acreditam que bons universos são aqueles que
+                        sabem acolher. A LEXARA é nossa. E agora, também é sua.
                     </p>
                 </motion.div>
-
             </div>
         </section>
     );
