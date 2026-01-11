@@ -1,7 +1,7 @@
 import MainHeroSplit from "@/components/hero/MainHeroSplit";
 import HomePillars from "@/components/HomePillars";
 import HomeFeaturedContent from "@/components/HomeFeaturedContent";
-import HomeAboutCodex from "@/components/HomeAboutCodex";
+import HomeAboutLexara from "@/components/HomeAboutLexara";
 import HomeCTASection from "@/components/HomeCTASection";
 
 import { Metadata } from "next";
@@ -64,7 +64,7 @@ export default function Home() {
       <MainHeroSplit />
       <HomePillars />
       <HomeFeaturedContent />
-      <HomeAboutCodex />
+      <HomeAboutLexara />
       <HomeCTASection />
     </>
   );
