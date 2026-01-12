@@ -76,7 +76,7 @@ export default function HomeFeaturedContent() {
                                     className="inline-block text-sm font-medium
                                                text-indigo-400 hover:text-indigo-300"
                                 >
-                                    Ler artigo →
+                                    Ler análise →
                                 </Link>
                             </div>
                         </motion.article>
