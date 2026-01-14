@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SectionPillsNav from "@/components/navigation/SectionPillsNav";
 import GamesCard from "@/components/card/GamesCard";
 
 export const metadata: Metadata = {
@@ -69,5 +70,10 @@ export const metadata: Metadata = {
 };
 
 export default function GamesPage() {
-    return <GamesCard />;
+    return (
+        <>
+            <SectionPillsNav />
+            <GamesCard />;
+        </>
+    )
 }
