@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SectionPillsNav from "@/components/navigation/SectionPillsNav";
 import CuriosidadesCard from "@/components/card/CuriosidadesCard";
 
 export const metadata: Metadata = {
@@ -63,5 +64,10 @@ export const metadata: Metadata = {
 };
 
 export default function CuriosidadesPage() {
-    return <CuriosidadesCard />;
+    return (
+        <>
+            <SectionPillsNav />
+            <CuriosidadesCard />;
+        </>
+    )
 }
