@@ -58,7 +58,7 @@ export default function ArticleUnderConstruction({
                             {message}
                         </p>
 
-                        <div className="mt-6 flex flex-wrap items-center gap-3">
+                        {/* <div className="mt-6 flex flex-wrap items-center gap-3">
                             <Link
                                 href={fallbackHref}
                                 className="
@@ -85,7 +85,7 @@ export default function ArticleUnderConstruction({
                                 <Sparkles className="w-4 h-4" />
                                 Ir para o início
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </motion.div>
