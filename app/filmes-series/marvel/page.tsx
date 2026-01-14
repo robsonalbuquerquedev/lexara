@@ -1,4 +1,5 @@
 import CardLayout from "@/components/layout/CardLayout";
+import BackButton from "@/components/navigation/BackButton";
 import ThorCard from "@/components/card/ThorCard";
 import type { Metadata } from "next";
 
@@ -50,7 +51,14 @@ export const metadata: Metadata = {
 
 export default function FilmesSeriesMarvelPage() {
     return (
-        <CardLayout>
+        <CardLayout
+            header={
+                <BackButton
+                    fallbackHref="/filmes-series"
+                    label="Voltar para Filmes & Séries"
+                />
+            }
+        >
             <ThorCard />
         </CardLayout>
     );
