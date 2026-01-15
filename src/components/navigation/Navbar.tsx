@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Home, Info, Layers, BookOpen, Image, Mail } from "lucide-react";
+import { Menu, X, Home, Info, HelpCircle, BookOpen, Image, Mail } from "lucide-react";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -13,7 +13,7 @@ export default function Navbar() {
             <ul className="hidden md:flex items-center gap-6 text-sm text-neutral-300">
                 <NavItem href="/" icon={<Home size={16} />} label="Início" />
                 <NavItem href="/sobre" icon={<Info size={16} />} label="Sobre" />
-                <NavItem href="/projetos" icon={<Layers size={16} />} label="Projetos" />
+                <NavItem href="/faq" icon={<HelpCircle size={16} />} label="FAQ" />
                 <NavItem href="/conteudos" icon={<BookOpen size={16} />} label="Conteúdos" />
                 <NavItem href="/galeria" icon={<Image size={16} />} label="Galeria" />
                 <NavItem href="/contato" icon={<Mail size={16} />} label="Contato" />
@@ -34,7 +34,7 @@ export default function Navbar() {
                     <ul className="flex flex-col divide-y divide-neutral-800 text-sm">
                         <MobileItem href="/" icon={<Home size={16} />} label="Início" onClick={() => setOpen(false)} />
                         <MobileItem href="/sobre" icon={<Info size={16} />} label="Sobre" onClick={() => setOpen(false)} />
-                        <MobileItem href="/projetos" icon={<Layers size={16} />} label="Projetos" onClick={() => setOpen(false)} />
+                        <MobileItem href="/faq" icon={<HelpCircle size={16} />} label="FAQ" onClick={() => setOpen(false)} />
                         <MobileItem href="/conteudos" icon={<BookOpen size={16} />} label="Conteúdos" onClick={() => setOpen(false)} />
                         <MobileItem href="/galeria" icon={<Image size={16} />} label="Galeria" onClick={() => setOpen(false)} />
                         <MobileItem href="/contato" icon={<Mail size={16} />} label="Contato" onClick={() => setOpen(false)} />

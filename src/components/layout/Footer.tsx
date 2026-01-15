@@ -81,6 +81,18 @@ export default function Footer() {
 
                         <li>
                             <a
+                                href="https://englishstudyhub.com.br/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 hover:text-white transition-colors"
+                            >
+                                English Study Hub
+                                <ExternalLink size={14} />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
                                 href="https://windly.com.br/"
                                 target="_blank"
                                 rel="noopener noreferrer"
