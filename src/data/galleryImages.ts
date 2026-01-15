@@ -11,7 +11,11 @@ export const galleryImages: GalleryImage[] = [
     { src: "/images/featured/batman.png", title: "Batman – Clássico", category: "Filmes & Séries" },
 
     { src: "/images/featured/marvel.png", title: "Universo Marvel", category: "Filmes & Séries" },
+
     { src: "/images/featured/games.png", title: "Games", category: "Games" },
+    { src: "/images/narrativas/lore-oculta.png", title: "Games", category: "Games" },
+    { src: "/images/narrativas/personagens-universos.png", title: "Games", category: "Games" },
+    { src: "/images/narrativas/worldbuilding-games.png", title: "Games", category: "Games" },
 
     { src: "/images/narrativas/hero-journey-map.png", title: "Mapa da Jornada do Herói", category: "Narrativas" },
     { src: "/images/narrativas/hero-journey-stages.png", title: "Etapas da Jornada do Herói", category: "Narrativas" },
