@@ -61,7 +61,7 @@ export default function LinhaDoTempoMovimentosPage() {
             header={
                 <BackButton
                     fallbackHref="/hqs-mangas"
-                    label="Voltar para HQs & Mangás"
+                    label="Voltar para História & Origem"
                 />
             }
         >
