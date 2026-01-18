@@ -18,7 +18,7 @@ export default function HomeNewsletter() {
 
         try {
             const response = await fetch(
-                "https://formsubmit.co/ajax/00e62b2eb50670b440cf470c86da243f",
+                "https://formsubmit.co/ajax/f1011b91958b187a02af21b9ed1cd576",
                 {
                     method: "POST",
                     body: formData,
