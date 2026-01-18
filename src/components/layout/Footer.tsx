@@ -1,13 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-    Instagram,
-    ExternalLink,
-    FileText,
-    ShieldCheck,
-    Layers,
-    HelpCircle,
-} from "lucide-react";
+import { Instagram, ExternalLink, FileText, ShieldCheck, Layers, HelpCircle, Cookie } from "lucide-react";
+import { openCookieSettings } from "@/components/ConsentMode";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -90,6 +84,23 @@ export default function Footer() {
                                 <ShieldCheck size={16} />
                                 Política de Privacidade
                             </Link>
+
+                            <Link
+                                href="/politica-de-cookies"
+                                className="flex items-center gap-2 hover:text-white transition-colors"
+                            >
+                                <Cookie size={16} />
+                                Política de Cookies
+                            </Link>
+
+                            <button
+                                type="button"
+                                onClick={openCookieSettings}
+                                className="flex items-center gap-2 text-left hover:text-white transition-colors cursor-pointer"
+                            >
+                                <Cookie size={16} />
+                                Configurações de cookies
+                            </button>
 
                             <Link
                                 href="/faq"

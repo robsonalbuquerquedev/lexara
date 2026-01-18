@@ -1,6 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-
+import ConsentMode from "@/components/ConsentMode";
 interface MainLayoutProps {
     children: React.ReactNode;
 }
@@ -25,6 +25,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
             <footer className="w-full">
                 <Footer />
             </footer>
+            <ConsentMode />
         </div>
     );
 }
