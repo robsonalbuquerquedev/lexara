@@ -1,4 +1,5 @@
 import MainLayout from "@/components/layout/MainLayout";
+import Script from "next/script";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -14,6 +15,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        {/* 📊 Google Analytics 4 — LEXARA */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-J6RKYV5X83"
+          strategy="afterInteractive"
+        />
+
+        <Script id="ga4-init-lexara" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J6RKYV5X83', {
+      anonymize_ip: true,
+      allow_ad_personalization_signals: false
+    });
+  `}
+        </Script>
+      </head>
       <body
       >
         <MainLayout>
