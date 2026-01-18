@@ -16,6 +16,19 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        {/* 🧠 Google Consent Mode */}
+        <Script id="consent-mode" strategy="beforeInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+  `}
+        </Script>
         {/* 📊 Google Analytics 4 — LEXARA */}
         <Script
           async
