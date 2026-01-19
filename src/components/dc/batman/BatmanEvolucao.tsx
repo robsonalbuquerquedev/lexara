@@ -488,8 +488,7 @@ export default function BatmanEvolucao() {
                     <h2 id="fontes" className="mt-16 mb-10 scroll-mt-24 text-2xl font-bold tracking-tight text-slate-100 md:text-3xl">Fontes & contexto</h2>
 
                     <p className="mb-3">
-                        Ao longo do artigo, referências a <strong>anos de lançamento</strong>,
-                        <strong>diretores</strong> e contextos históricos não aparecem por acaso.
+                        Ao longo do artigo, referências a <strong>anos de lançamento</strong>, <strong>diretores</strong> e contextos históricos não aparecem por acaso.
                         Elas funcionam como pontos de ancoragem que conectam a análise crítica a fatos
                         verificáveis, ajudando o leitor a situar cada fase do Batman dentro de um
                         recorte real de tempo, mercado e produção cinematográfica. Essa base factual
