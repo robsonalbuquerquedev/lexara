@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         locale: "pt_BR",
         images: [
             {
-                url: "https://lexara.com.br/images/og/og-filmes-series-dc.png",
+                url: "https://lexara.com.br/og/og-filmes-series-dc.png",
                 width: 1200,
                 height: 630,
                 alt: "LEXARA — Batman: a evolução do herói nas telonas",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         title: "Batman: a evolução do herói nas telonas | LEXARA",
         description:
             "Uma leitura crítica das diferentes versões do Batman no cinema — e por que cada era escolhe um “Batman” diferente.",
-        images: ["https://lexara.com.br/images/og/og-filmes-series-dc.png"],
+        images: ["https://lexara.com.br/og/og-filmes-series-dc.png"],
     },
 
     // Opcional, mas bem útil
