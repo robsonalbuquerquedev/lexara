@@ -306,8 +306,7 @@ export default function BatmanEvolucao() {
                     <p className="mb-3">
                         Esse deslocamento de tom é fundamental para entender a evolução do personagem.
                         Ao priorizar o espetáculo acima do conflito interno, o Batman perde parte da
-                        tensão que sempre o definiu: o equilíbrio frágil entre <strong>trauma pessoal</strong>
-                        e <strong>controle racional</strong>. Quando essa camada psicológica é deixada de lado,
+                        tensão que sempre o definiu: o equilíbrio frágil entre <strong>trauma pessoal</strong> e <strong>controle racional</strong>. Quando essa camada psicológica é deixada de lado,
                         o herói continua reconhecível na superfície, mas se torna mais leve, menos denso
                         e, para muitos, emocionalmente vazio. O resultado é um Batman que funciona como
                         ícone visual, mas não como figura trágica.
@@ -448,8 +447,7 @@ export default function BatmanEvolucao() {
                     <p className="mb-3">
                         Tim Burton amplia o mito e transforma o Batman em lenda sombria. Christopher
                         Nolan questiona o preço da ordem, da vigilância e do sacrifício individual.
-                        Matt Reeves resgata o detetive e desloca o foco para o significado de
-                        <strong>ser símbolo</strong> em uma cidade que confunde justiça com vingança.
+                        Matt Reeves resgata o detetive e desloca o foco para o significado de <strong>ser símbolo</strong> em uma cidade que confunde justiça com vingança.
                         Juntas, essas leituras não se anulam — elas se complementam, formando um
                         retrato complexo de um herói moldado pelas ansiedades do seu tempo.
                     </p>
