@@ -1,6 +1,5 @@
-import CardLayout from "@/components/layout/CardLayout";
-import BackButton from "@/components/navigation/BackButton";
-import BatmanCard from "@/components/card/BatmanCard";
+import DcCharactersHub from "@/components/dc/DcCharactersHub";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -50,15 +49,6 @@ export const metadata: Metadata = {
 
 export default function FilmesSeriesDcPage() {
   return (
-    <CardLayout
-      header={
-        <BackButton
-          fallbackHref="/filmes-series"
-          label="Voltar para Filmes & Séries"
-        />
-      }
-    >
-      <BatmanCard />
-    </CardLayout>
+    <DcCharactersHub />
   );
 }
