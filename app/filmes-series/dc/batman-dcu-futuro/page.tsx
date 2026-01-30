@@ -75,6 +75,8 @@ export const metadata: Metadata = {
     publisher: "LEXARA",
 };
 
+export const revalidate = 60;
+
 export default function BatmanDCUFuturoPage() {
     return (
         <BatmanDcuFuturo />
