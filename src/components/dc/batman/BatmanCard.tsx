@@ -4,28 +4,38 @@ import { Film } from "lucide-react";
 
 import { batmanArticles } from "@/data/dc/batman/batmanArticles";
 
+function isPublishedNow(publishedAtISO?: string) {
+    if (!publishedAtISO) return true; // artigos antigos continuam ok
+    return new Date(publishedAtISO).getTime() <= Date.now();
+}
+
 export default function BatmanCard() {
+    const visibleArticles = batmanArticles
+        .filter((a) => isPublishedNow(a.publishedAtISO))
+        .sort((a, b) => {
+            // opcional: ordenar por data (agendados/publicados) se você quiser.
+            const da = a.publishedAtISO ? new Date(a.publishedAtISO).getTime() : 0;
+            const db = b.publishedAtISO ? new Date(b.publishedAtISO).getTime() : 0;
+            return db - da;
+        });
+
     return (
         <section className="max-w-6xl mx-auto px-6 py-16">
-            {/* Cabeçalho */}
             <header className="mb-12">
                 <div className="flex items-center gap-3 mb-4">
                     <Film className="w-6 h-6 text-primary" />
-                    <h2 className="text-2xl font-bold tracking-tight">
-                        Batman
-                    </h2>
+                    <h2 className="text-2xl font-bold tracking-tight">Batman</h2>
                 </div>
 
                 <p className="text-muted-foreground max-w-3xl">
-                    Análises narrativas e críticas sobre as diferentes versões do Batman
-                    no cinema, explorando suas transformações, conflitos e o impacto
-                    cultural do personagem ao longo das décadas.
+                    Análises narrativas e críticas sobre as diferentes versões do Batman no cinema,
+                    explorando suas transformações, conflitos e o impacto cultural do personagem ao
+                    longo das décadas.
                 </p>
             </header>
 
-            {/* Cards */}
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {batmanArticles.map((article) => (
+                {visibleArticles.map((article) => (
                     <Link
                         key={article.id}
                         href={article.href}
