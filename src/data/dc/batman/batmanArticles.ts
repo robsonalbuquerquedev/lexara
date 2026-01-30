@@ -5,6 +5,7 @@ export type BatmanArticle = {
     image: string;
     category: string;
     href: string;
+    publishedAtISO?: string;
 };
 
 export const batmanArticles: BatmanArticle[] = [
@@ -16,6 +17,7 @@ export const batmanArticles: BatmanArticle[] = [
         image: "/images/featured/batmanreal.png",
         category: "Filmes & Séries",
         href: "/filmes-series/dc/batman-evolucao",
+        publishedAtISO: "2026-01-19T14:30:00-03:00",
     },
     {
         id: 2,
@@ -25,6 +27,7 @@ export const batmanArticles: BatmanArticle[] = [
         image: "/images/featured/batman-affleck.png",
         category: "Filmes & Séries",
         href: "/filmes-series/dc/batman-ben-affleck",
+        publishedAtISO: "2026-01-29T15:42:00-03:00",
     },
     {
         id: 3,
@@ -34,14 +37,16 @@ export const batmanArticles: BatmanArticle[] = [
         image: "/images/featured/batman-pattinson.png",
         category: "Filmes & Séries",
         href: "/filmes-series/dc/batman-pattinson",
+        publishedAtISO: "2026-01-29T19:45:00-03:00",
     },
     {
         id: 4,
         title: "O futuro do Batman no DCU de James Gunn: expectativas e riscos",
         excerpt:
             "Expectativas, incertezas e caminhos possíveis para o Cavaleiro das Trevas no novo universo cinematográfico da DC.",
-        image: "/images/featured/batman.png",
+        image: "/images/featured/batman-dcu-futuro.png",
         category: "Filmes & Séries",
         href: "/filmes-series/dc/batman-dcu-futuro",
+        publishedAtISO: "2026-01-30T09:00:00-03:00",
     },
 ];
