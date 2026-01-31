@@ -18,7 +18,7 @@ const DC_CHARACTERS: CharacterHubItem[] = [
         description:
             "Do gótico ao realismo: interpretações, diretores e os caminhos do Cavaleiro das Trevas no cinema.",
         href: "/filmes-series/dc/batman",
-        image: "/images/featured/batmanreal.png",
+        image: "/images/featured/batman/cavaleiro-das-trevas.png",
         badge: "Seção especial",
         icon: <Shield size={18} />,
         status: "Pronto",
@@ -28,17 +28,17 @@ const DC_CHARACTERS: CharacterHubItem[] = [
         description:
             "O símbolo máximo da esperança: eras, versões nas telonas e o que vem pela frente no DCU.",
         href: "/filmes-series/dc/superman",
-        image: "/images/featured/superman.png",
-        badge: "Em construção",
-        icon: <Sparkles size={18} />,
-        status: "Em breve",
+        image: "/images/featured/superman/homem-de-aco.png",
+        badge: "Seção especial",
+        icon: <Shield size={18} />,
+        status: "Pronto",
     },
     {
         title: "Mulher-Maravilha",
         description:
             "Mito, heroísmo e impacto cultural: uma leitura do papel da personagem no cinema da DC.",
         href: "/filmes-series/dc/wonder-woman",
-        image: "/images/featured/wonderwoman.png",
+        image: "/images/featured/wonderwoman/mulher-maravilha.png",
         badge: "Em construção",
         icon: <Sparkles size={18} />,
         status: "Em breve",
