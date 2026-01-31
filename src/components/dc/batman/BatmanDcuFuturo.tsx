@@ -26,7 +26,7 @@ const ARTICLE = {
     publishedLabel: "30.01.2026, às 09H00",
     readingTime: "3 min de leitura",
     coverImage: {
-        src: "/images/featured/batman-dcu-futuro.png",
+        src: "/images/featured/batman/batman-dcu-future.png",
         alt: "Silhueta do Batman diante de um horizonte noturno — futuro do personagem no DCU",
     },
     author: {
@@ -186,7 +186,7 @@ export default function BatmanDcuFuturo() {
                         alt={ARTICLE.coverImage.alt}
                         caption="O Batman sempre volta — a questão é: em qual forma, e com qual impacto no DCU?"
                         priority
-                        aspect="21/9"
+                        aspect="16/9"
                     />
                 </header>
 
