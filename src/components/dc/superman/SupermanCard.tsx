@@ -5,8 +5,8 @@ import { Film } from "lucide-react";
 import { supermanArticles } from "@/data/dc/superman/supermanArticles";
 
 function isPublishedNow(publishedAtISO?: string) {
-    if (!publishedAtISO) return true; // artigos antigos continuam ok
-    return new Date(publishedAtISO).getTime() <= Date.now();
+    if (!publishedAtISO) return true;
+    return Date.now() >= Date.parse(publishedAtISO);
 }
 
 export default function SupermanCard() {
