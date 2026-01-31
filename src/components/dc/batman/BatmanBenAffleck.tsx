@@ -25,7 +25,7 @@ const ARTICLE = {
     publishedLabel: "29.01.2026, às 15H42",
     readingTime: "3 min de leitura",
     coverImage: {
-        src: "/images/featured/batman-affleck.png",
+        src: "/images/featured/batman/dceu-batman-affleck.png",
         alt: "Ben Affleck como Batman no DCEU — uma leitura entre mito, força e controvérsia",
     },
     author: {
@@ -174,7 +174,7 @@ export default function BatmanBenAffleck() {
                         alt={ARTICLE.coverImage.alt}
                         caption="Entre o símbolo e o choque: a leitura do Batman no DCEU."
                         priority
-                        aspect="21/9"
+                        aspect="16/9"
                     />
                 </header>
 
