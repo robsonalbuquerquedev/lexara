@@ -57,8 +57,7 @@ function formatISOToDateLabel(iso: string) {
 }
 
 function isPublishedNow(publishedAtISO: string) {
-    // O ISO já inclui -03:00, então o Date() interpreta com offset corretamente.
-    return new Date(publishedAtISO).getTime() <= Date.now();
+    return Date.now() >= Date.parse(publishedAtISO);
 }
 
 function AdSlot({ label }: { label: string }) {
