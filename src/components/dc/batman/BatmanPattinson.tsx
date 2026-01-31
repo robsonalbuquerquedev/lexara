@@ -25,7 +25,7 @@ const ARTICLE = {
     publishedLabel: "29.01.2026, às 19H45",
     readingTime: "3 min de leitura",
     coverImage: {
-        src: "/images/featured/batman-pattinson.png",
+        src: "/images/featured/batman/batman-robert-pattinson.png",
         alt: "Robert Pattinson como Batman em The Batman (2022), em clima noir e investigativo.",
     },
     author: {
@@ -174,7 +174,7 @@ export default function BatmanPattinson() {
                         alt={ARTICLE.coverImage.alt}
                         caption=""
                         priority
-                        aspect="21/9"
+                        aspect="16/9"
                     />
                 </header>
 
