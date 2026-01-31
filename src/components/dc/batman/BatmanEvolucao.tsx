@@ -1,11 +1,11 @@
 // BatmanEvolucao.tsx
-import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { Film, Shield, Quote, ArrowRight, List } from "lucide-react";
 import ArticleMeta from "@/components/article/ArticleMeta";
 import ArticleCover from "@/components/article/ArticleCover";
 import ArticleVideo from "@/components/article/ArticleVideo";
+import { breadcrumbItem } from "@/lib/schema";
 
 type Reviewer = {
     name: string;
@@ -13,6 +13,7 @@ type Reviewer = {
     avatarSrc: string;
 };
 
+// 🔹 Dados do artigo
 const ARTICLE = {
     title: "Batman: a evolução do herói nas telonas",
     subtitle:
@@ -98,14 +99,15 @@ export default function BatmanEvolucao() {
         about: [{ "@type": "Thing", name: "Batman" }, { "@type": "Thing", name: "DC" }],
     };
 
+    // 🔹 Schema
     const jsonLdBreadcrumbs = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Filmes & Séries", item: "/filmes-series" },
-            { "@type": "ListItem", position: 2, name: "DC", item: ARTICLE.categoryHref },
-            { "@type": "ListItem", position: 3, name: "Batman", item: ARTICLE.topicHref },
-            { "@type": "ListItem", position: 4, name: ARTICLE.title, item: ARTICLE.slug },
+            breadcrumbItem("Filmes & Séries", "/filmes-series", 1),
+            breadcrumbItem("DC", ARTICLE.categoryHref, 2),
+            breadcrumbItem("Batman", ARTICLE.topicHref, 3),
+            breadcrumbItem(ARTICLE.title, ARTICLE.slug, 4),
         ],
     };
 
