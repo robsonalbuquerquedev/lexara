@@ -27,7 +27,7 @@ const ARTICLE = {
     readingTime: "3 min de leitura",
     coverImage: {
         // Use uma imagem sua (identidade LEXARA). Se ainda não existir, mantenha o placeholder.
-        src: "/images/featured/batman-evolucao.png",
+        src: "/images/featured/batman/batman-evolucao-cinema.png",
         alt: "Batman no cinema: contraste entre estilos sombrios e realistas ao longo das décadas",
     },
     author: {
@@ -176,7 +176,7 @@ export default function BatmanEvolucao() {
                         alt={ARTICLE.coverImage.alt}
                         caption="No cinema, o Batman vira “espelho” do que a época teme — e do que ela precisa acreditar."
                         priority
-                        aspect="21/9"
+                        aspect="16/9"
                     />
                 </header>
 
