@@ -8,20 +8,23 @@ type BackButtonProps = {
     fallbackHref?: string;
     label?: string;
     className?: string;
+    mode?: "history" | "fixed";
 };
 
 export default function BackButton({
     fallbackHref = "/",
     label = "Voltar",
     className = "",
+    mode = "history",
 }: BackButtonProps) {
     const router = useRouter();
 
     const handleBack = () => {
-        // Heurística simples: se tiver histórico, volta; se não, vai pro fallback
-        if (typeof window !== "undefined" && window.history.length > 1) {
-            router.back();
-            return;
+        if (mode === "history") {
+            if (typeof window !== "undefined" && window.history.length > 1) {
+                router.back();
+                return;
+            }
         }
         router.push(fallbackHref);
     };
