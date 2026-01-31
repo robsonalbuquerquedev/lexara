@@ -4,9 +4,9 @@ export const featuredContent = [
         title: "Batman: a evolução do herói nas telonas",
         excerpt:
             "Uma análise detalhada das diferentes interpretações do Batman no cinema, do tom sombrio de Tim Burton à abordagem realista e épica de Christopher Nolan.",
-        image: "/images/featured/batmanreal.png",
+        image: "/images/featured/batman/batman-evolucao-cinema.png",
         category: "Filmes & Séries",
-        href: "/filmes-series/dc/batman-evolucao",
+        href: "/filmes-series/dc/batman/batman-evolucao",
     },
     {
         id: 2,

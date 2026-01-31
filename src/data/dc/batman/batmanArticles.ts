@@ -14,9 +14,9 @@ export const batmanArticles: BatmanArticle[] = [
         title: "Batman: a evolução do herói nas telonas",
         excerpt:
             "Uma análise detalhada das diferentes interpretações do Batman no cinema, do tom sombrio de Tim Burton à abordagem realista e épica de Christopher Nolan.",
-        image: "/images/featured/batmanreal.png",
+        image: "/images/featured/batman/batman-evolucao-cinema.png",
         category: "Filmes & Séries",
-        href: "/filmes-series/dc/batman-evolucao",
+        href: "/filmes-series/dc/batman/batman-evolucao",
         publishedAtISO: "2026-01-19T14:30:00-03:00",
     },
     {
@@ -24,9 +24,9 @@ export const batmanArticles: BatmanArticle[] = [
         title: "Ben Affleck e o Batman do DCEU: entre o mito e a controvérsia",
         excerpt:
             "Uma leitura crítica sobre a versão mais brutal do Cavaleiro das Trevas e os debates que marcaram o Batman no DCEU.",
-        image: "/images/featured/batman-affleck.png",
+        image: "/images/featured/batman/dceu-batman-affleck.png",
         category: "Filmes & Séries",
-        href: "/filmes-series/dc/batman-ben-affleck",
+        href: "/filmes-series/dc/batman/batman-ben-affleck",
         publishedAtISO: "2026-01-29T15:42:00-03:00",
     },
     {
@@ -34,9 +34,9 @@ export const batmanArticles: BatmanArticle[] = [
         title: "Robert Pattinson: o Batman detetive e o nascimento de um novo universo",
         excerpt:
             "Uma análise do Batman mais investigativo já visto no cinema e o impacto dessa abordagem para o futuro da DC.",
-        image: "/images/featured/batman-pattinson.png",
+        image: "/images/featured/batman/batman-robert-pattinson.png",
         category: "Filmes & Séries",
-        href: "/filmes-series/dc/batman-pattinson",
+        href: "/filmes-series/dc/batman/batman-pattinson",
         publishedAtISO: "2026-01-29T19:45:00-03:00",
     },
     {
@@ -44,9 +44,9 @@ export const batmanArticles: BatmanArticle[] = [
         title: "O futuro do Batman no DCU de James Gunn: expectativas e riscos",
         excerpt:
             "Expectativas, incertezas e caminhos possíveis para o Cavaleiro das Trevas no novo universo cinematográfico da DC.",
-        image: "/images/featured/batman-dcu-futuro.png",
+        image: "/images/featured/batman/batman-dcu-future.png",
         category: "Filmes & Séries",
-        href: "/filmes-series/dc/batman-dcu-futuro",
+        href: "/filmes-series/dc/batman/batman-dcu-futuro",
         publishedAtISO: "2026-01-30T09:00:00-03:00",
     },
 ];
