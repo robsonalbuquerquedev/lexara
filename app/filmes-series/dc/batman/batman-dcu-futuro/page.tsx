@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://lexara.com.br/filmes-series/dc/batman-dcu-futuro",
+        canonical: "https://lexara.com.br/filmes-series/dc/batman/batman-dcu-futuro",
     },
 
     // SEO + Rich Results
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
     openGraph: {
         type: "article",
-        url: "https://lexara.com.br/filmes-series/dc/batman-dcu-futuro",
+        url: "https://lexara.com.br/filmes-series/dc/batman/batman-dcu-futuro",
         title:
             "O futuro do Batman no DCU de James Gunn: expectativas e riscos | LEXARA",
         description:
