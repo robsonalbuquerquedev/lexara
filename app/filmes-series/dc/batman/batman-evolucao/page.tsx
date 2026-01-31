@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         "LEXARA",
     ],
     alternates: {
-        canonical: "https://lexara.com.br/filmes-series/dc/batman-evolucao",
+        canonical: "https://lexara.com.br/filmes-series/dc/batman/batman-evolucao",
     },
 
     // Ajuda SEO e rich previews
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 
     openGraph: {
         type: "article",
-        url: "https://lexara.com.br/filmes-series/dc/batman-evolucao",
+        url: "https://lexara.com.br/filmes-series/dc/batman/batman-evolucao",
         title: "Batman: a evolução do herói nas telonas | LEXARA",
         description:
             "Do gótico de Burton ao realismo de Nolan: como o Batman mudou no cinema — e o que cada fase revela sobre medo, justiça e poder.",
