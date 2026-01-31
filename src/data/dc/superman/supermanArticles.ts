@@ -14,7 +14,7 @@ export const supermanArticles: SupermanArticle[] = [
         title: "Superman no cinema: por que ele sempre representa esperança em tempos de crise",
         excerpt:
             "Do surgimento como símbolo moral até as leituras mais sombrias, analisamos como o Superman se tornou o reflexo das crises do mundo real — e por que isso ainda importa hoje.",
-        image: "/images/featured/superman-esperanca-cinema.png",
+        image: "/images/featured/superman/superman-esperanca-cinema.png",
         category: "Filmes & Séries",
         href: "/filmes-series/dc/superman/superman-esperanca-cinema",
         publishedAtISO: "2026-01-31T07:30:00-03:00",
