@@ -1,5 +1,6 @@
 import MainHeroSplit from "@/components/hero/MainHeroSplit";
 import HomePillars from "@/components/HomePillars";
+import HomeLatestCarousel from "@/components/HomeLatestCarousel";
 import HomeFeaturedContent from "@/components/HomeFeaturedContent";
 import HomeAboutLexara from "@/components/HomeAboutLexara";
 import HomeNewsletter from "@/components/HomeNewsletter";
@@ -64,6 +65,9 @@ export default function Home() {
     <>
       <MainHeroSplit />
       <HomePillars />
+      {/* 🔥 Últimos publicados */}
+      <HomeLatestCarousel />
+      {/* ⭐ Séries / Conteúdos em destaque */}
       <HomeFeaturedContent />
       <HomeAboutLexara />
       <HomeNewsletter />
