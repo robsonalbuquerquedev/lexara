@@ -31,6 +31,8 @@ export async function generateMetadata(): Promise<Metadata> {
         twitterDescription:
             "Do clássico ao moderno: veja como cada Superman no cinema revela uma fase diferente da DC.",
 
+        ogImagePath: "/og/superman/og-superman-versoes-cinema.png",
+
         ogImageAlt:
             "LEXARA — As diferentes versões do Superman no cinema e o que cada uma diz sobre a DC",
     });
