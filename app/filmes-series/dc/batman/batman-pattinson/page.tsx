@@ -33,6 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
         twitterDescription:
             "O Batman mais investigativo do cinema: noir, Gotham sombria e o início de um novo universo da DC.",
 
+        ogImagePath: "/og/batman/og-batman-robert-pattinson.png",
+
         ogImageAlt:
             "LEXARA — Robert Pattinson como Batman em uma abordagem noir e investigativa",
     });
