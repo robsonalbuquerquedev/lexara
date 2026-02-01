@@ -35,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
         twitterDescription:
             "O Batman mais brutal do cinema: uma leitura crítica sobre a versão de Ben Affleck, o peso do mito e as controvérsias do DCEU.",
 
-        ogImagePath: "/og/batman/og-batman-ben-affleck.png",
+        ogImagePath: "/og/batman/og-dceu-batman-affleck.png",
 
         ogImageAlt:
             "LEXARA — Ben Affleck como Batman no DCEU",
