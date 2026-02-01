@@ -1,29 +1,21 @@
+// data/featuredContent.ts
 export const featuredContent = [
     {
         id: 1,
-        title: "Batman: a evolução do herói nas telonas",
+        title: "Batman no cinema",
         excerpt:
-            "Uma análise detalhada das diferentes interpretações do Batman no cinema, do tom sombrio de Tim Burton à abordagem realista e épica de Christopher Nolan.",
+            "Uma seção editorial para entender as diferentes fases do Batman nas telonas. Explore os artigos em ordem recomendada, compare eras e acompanhe como o mito do herói foi reinterpretado ao longo do tempo.",
         image: "/images/featured/batman/batman-evolucao-cinema.png",
-        category: "Filmes & Séries",
-        href: "/filmes-series/dc/batman/batman-evolucao",
+        category: "Especial Batman",
+        href: "/filmes-series/dc/batman",
     },
     {
         id: 2,
-        title: "O impacto cultural do universo Marvel",
+        title: "Superman no cinema",
         excerpt:
-            "Um estudo sobre como o universo Marvel influenciou o cinema blockbuster, a cultura pop e a forma moderna de construir narrativas interconectadas.",
-        image: "/images/featured/marvel.png",
-        category: "HQs & Mangás",
-        href: "/historia-origem/impacto-cultural-legado/impacto-cultural-marvel",
-    },
-    {
-        id: 3,
-        title: "Games que mudaram a forma de contar histórias",
-        excerpt:
-            "Uma reflexão sobre jogos que elevaram a narrativa interativa, mostrando como os videogames se tornaram uma poderosa forma de expressão artística.",
-        image: "/images/featured/games.png",
-        category: "Games",
-        href: "/games/narrativa-mundo/games-que-mudaram-a-forma-de-contar-historias",
+            "Uma série de análises que investigam o simbolismo da esperança, os dilemas morais e as reinvenções do Superman no cinema. Acesse o hub e siga o caminho editorial sugerido.",
+        image: "/images/featured/superman/superman-esperanca-cinema.png",
+        category: "Especial Superman",
+        href: "/filmes-series/dc/superman",
     },
 ];
