@@ -32,6 +32,8 @@ export async function generateMetadata(): Promise<Metadata> {
         twitterDescription:
             "Uma leitura crítica sobre o futuro do Batman no DCU: riscos criativos, expectativas do público e os caminhos possíveis para o herói.",
 
+        ogImagePath: "/og/batman/og-batman-dcu-future.png",
+
         ogImageAlt:
             "LEXARA — O futuro do Batman no DCU de James Gunn: expectativas e riscos",
     });
