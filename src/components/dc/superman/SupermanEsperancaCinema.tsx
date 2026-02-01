@@ -1,43 +1,14 @@
 import Link from "next/link";
 import Script from "next/script";
-import { notFound } from "next/navigation";
 import { ArrowRight, Film, List, Quote, Shield } from "lucide-react";
-
 import ArticleMeta from "@/components/article/ArticleMeta";
 import ArticleCover from "@/components/article/ArticleCover";
 import ArticleVideo from "@/components/article/ArticleVideo";
+import { breadcrumbItem } from "@/lib/schema";
+import type { Article } from "@/content/article";
 
-type Reviewer = {
-    name: string;
-    role: string;
-    avatarSrc: string;
-};
-
-const ARTICLE = {
-    title: "Superman no cinema: por que ele sempre representa esperança em tempos de crise",
-    subtitle:
-        "Do surgimento como símbolo moral até as leituras mais sombrias, analisamos como o Superman se tornou o reflexo das crises do mundo real — e por que isso ainda importa hoje.",
-    badge: "Filmes & Séries — DC",
-    categoryHref: "/filmes-series/dc",
-    topic: "Superman",
-    topicHref: "/filmes-series/dc/superman",
-    slug: "/filmes-series/dc/superman/superman-esperanca-cinema",
-    publishedAtISO: "2026-01-31T07:30:00-03:00",
-    publishedLabel: "31.01.2026, às 07H30",
-    readingTime: "3 min de leitura",
-    coverImage: {
-        src: "/images/featured/superman/superman-esperanca-cinema.png",
-        alt: "Superman como símbolo de esperança no cinema — análise narrativa LEXARA",
-    },
-    author: {
-        name: "Robson Albuquerque",
-        avatarSrc: "/images/about/robson.png",
-        role: "Autor",
-    },
-    reviewers: [
-        { name: "Emanuel José", role: "Revisão", avatarSrc: "/images/about/emanuel.jpeg" },
-        { name: "Celso Lopes", role: "Revisão", avatarSrc: "/images/about/celso.jpeg" },
-    ] as Reviewer[],
+type SupermanEsperancaCinemaProps = {
+    article: Article;
 };
 
 const SECTIONS = [
@@ -75,29 +46,37 @@ function AdSlot({ label }: { label: string }) {
     );
 }
 
-export default function SupermanEsperancaCinema() {
+export default function SupermanEsperancaCinema({ article }: SupermanEsperancaCinemaProps) {
     // ✅ Publicação programada (#1): antes do horário, o artigo NÃO existe publicamente.
-    if (!isPublishedNow(ARTICLE.publishedAtISO)) {
-        notFound();
-    }
+    if (!isPublishedNow(article.publishedAtISO)) {
+        return (
+            <section className="mx-auto max-w-2xl py-20 text-center">
+                <h1 className="text-2xl font-bold">Publicação programada</h1>
 
+                <p className="mt-4 text-slate-400">
+                    Este artigo ficará disponível em {article.publishedAtLabel}.
+                </p>
+            </section>
+        );
+    }
+    
     const jsonLdArticle = {
         "@context": "https://schema.org",
         "@type": "Article",
-        headline: ARTICLE.title,
-        description: ARTICLE.subtitle,
-        datePublished: ARTICLE.publishedAtISO,
-        dateModified: ARTICLE.publishedAtISO,
+        headline: article.title,
+        description: article.subtitle,
+        datePublished: article.publishedAtISO,
+        dateModified: article.publishedAtISO,
         author: {
             "@type": "Person",
-            name: ARTICLE.author.name,
+            name: article.author.name,
         },
         publisher: {
             "@type": "Organization",
             name: "LEXARA",
         },
-        mainEntityOfPage: ARTICLE.slug,
-        image: [ARTICLE.coverImage.src],
+        mainEntityOfPage: article.slug,
+        image: [article.coverImage.src],
         about: [
             { "@type": "Thing", name: "Superman" },
             { "@type": "Thing", name: "DC" },
@@ -106,14 +85,15 @@ export default function SupermanEsperancaCinema() {
         ],
     };
 
+    // 🔹 Schema
     const jsonLdBreadcrumbs = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Filmes & Séries", item: "/filmes-series" },
-            { "@type": "ListItem", position: 2, name: "DC", item: ARTICLE.categoryHref },
-            { "@type": "ListItem", position: 3, name: "Superman", item: ARTICLE.topicHref },
-            { "@type": "ListItem", position: 4, name: ARTICLE.title, item: ARTICLE.slug },
+            breadcrumbItem("Filmes & Séries", "/filmes-series", 1),
+            breadcrumbItem("DC", article.categoryHref, 2),
+            breadcrumbItem("Superman", article.topicHref, 3),
+            breadcrumbItem(article.title, article.slug, 4),
         ],
     };
 
@@ -145,49 +125,49 @@ export default function SupermanEsperancaCinema() {
                 <header className="mb-10">
                     <div className="flex flex-wrap items-center gap-3">
                         <Link
-                            href={ARTICLE.categoryHref}
+                            href={article.categoryHref}
                             className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-950/60 px-3 py-1 text-xs font-semibold text-slate-200 hover:border-slate-700"
                         >
                             <Shield size={14} />
-                            {ARTICLE.badge}
+                            {article.badge}
                         </Link>
 
                         <Link
-                            href={ARTICLE.topicHref}
+                            href={article.topicHref}
                             className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-950/30 px-3 py-1 text-xs text-slate-300 hover:border-slate-700 hover:text-slate-100"
                             title="Ver a seção Superman"
                         >
                             <Film size={14} />
-                            {ARTICLE.topic}
+                            {article.topic}
                         </Link>
                     </div>
 
                     <h1 className="mt-8 text-4xl font-extrabold tracking-tight text-slate-100 md:text-5xl lg:text-6xl">
-                        {ARTICLE.title}
+                        {article.title}
                     </h1>
 
                     <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-300 md:text-xl">
-                        {ARTICLE.subtitle}
+                        {article.subtitle}
                     </p>
 
                     <ArticleMeta
                         author={{
-                            name: ARTICLE.author.name,
-                            avatar: ARTICLE.author.avatarSrc,
-                            role: ARTICLE.author.role,
+                            name: article.author.name,
+                            avatar: article.author.avatarSrc,
+                            role: article.author.role,
                         }}
-                        reviewers={ARTICLE.reviewers.map((r) => ({
+                        reviewers={article.reviewers.map((r) => ({
                             name: r.name,
                             avatar: r.avatarSrc,
                             role: r.role,
                         }))}
-                        readingTime={ARTICLE.readingTime}
-                        publishedAtLabel={ARTICLE.publishedLabel}
+                        readingTime={article.readingTime}
+                        publishedAtLabel={article.publishedAtLabel}
                     />
 
                     <ArticleCover
-                        src={ARTICLE.coverImage.src}
-                        alt={ARTICLE.coverImage.alt}
+                        src={article.coverImage.src}
+                        alt={article.coverImage.alt}
                         caption="Quando o mundo escurece, o Superman funciona como um “farol narrativo”: ele aponta para a esperança — e obriga o cinema a justificar por que ainda vale acreditar."
                         priority
                         aspect="16/9"
@@ -433,14 +413,14 @@ export default function SupermanEsperancaCinema() {
 
                         <div className="mt-4 flex flex-wrap gap-3">
                             <Link
-                                href={ARTICLE.topicHref}
+                                href={article.topicHref}
                                 className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950 hover:opacity-90"
                             >
                                 Ver a seção Superman <ArrowRight size={16} />
                             </Link>
 
                             <Link
-                                href={ARTICLE.categoryHref}
+                                href={article.categoryHref}
                                 className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
                             >
                                 Explorar DC <ArrowRight size={16} />
@@ -492,8 +472,8 @@ export default function SupermanEsperancaCinema() {
 
                 <footer className="mt-10 border-t border-slate-800 pt-6 text-xs text-slate-500">
                     <p>
-                        Publicado em <span className="text-slate-300">{ARTICLE.publishedLabel}</span>.{" "}
-                        <span className="text-slate-500">({formatISOToDateLabel(ARTICLE.publishedAtISO)})</span>
+                        Publicado em <span className="text-slate-300">{article.publishedAtLabel}</span>.{" "}
+                        <span className="text-slate-500">({formatISOToDateLabel(article.publishedAtISO)})</span>
                     </p>
                 </footer>
             </article>
