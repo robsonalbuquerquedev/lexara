@@ -35,6 +35,8 @@ export async function generateMetadata(): Promise<Metadata> {
         twitterDescription:
             "O Superman mais poderoso também enfrenta os dilemas mais difíceis. Uma análise sobre moral, responsabilidade e consequências no cinema.",
 
+        ogImagePath: "/og/superman/og-superman-dilema-moral.png",
+
         ogImageAlt: "LEXARA — O dilema moral do Superman no cinema moderno",
     });
 }
