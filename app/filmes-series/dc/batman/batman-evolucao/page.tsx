@@ -33,6 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
         twitterDescription:
             "Uma leitura crítica das diferentes versões do Batman no cinema — e por que cada era escolhe um “Batman” diferente.",
 
+        ogImagePath: "/og/batman/og-batman-evolucao-cinema.png",
+
         ogImageAlt:
             "LEXARA — Batman: a evolução do herói nas telonas",
     });
