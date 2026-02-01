@@ -31,6 +31,8 @@ export async function generateMetadata(): Promise<Metadata> {
         twitterDescription:
             "Análise sobre o papel do Superman no novo DCU, os riscos do recomeço e o retorno da esperança como identidade da DC.",
 
+        ogImagePath: "/og/superman/og-superman-dcu-futuro.png",
+
         ogImageAlt:
             "LEXARA — O futuro do Superman no DCU: expectativas, riscos e o peso da esperança",
     });
