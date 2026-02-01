@@ -9,7 +9,6 @@ export default function HomeFeaturedContent() {
     return (
         <section className="w-full py-24">
             <div className="max-w-7xl mx-auto px-4">
-
                 {/* Cabeçalho da seção */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -18,12 +17,10 @@ export default function HomeFeaturedContent() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-2xl md:text-4xl font-bold">
-                        Conteúdos em destaque
-                    </h2>
+                    <h2 className="text-2xl md:text-4xl font-bold">Séries editoriais em destaque</h2>
                     <p className="text-slate-400 mt-4 text-sm md:text-base max-w-3xl mx-auto">
-                        Artigos cuidadosamente selecionados que aprofundam debates, análises e reflexões
-                        sobre filmes, séries, games e narrativas que definem a cultura geek contemporânea.
+                        Portas de entrada editoriais para maratonar no LEXARA: cada seção reúne contexto,
+                        ordem de leitura e artigos conectados por tema.
                     </p>
                 </motion.div>
 
@@ -35,25 +32,17 @@ export default function HomeFeaturedContent() {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{
-                                duration: 0.6,
-                                delay: index * 0.1,
-                            }}
+                            transition={{ duration: 0.6, delay: index * 0.1 }}
                             className="rounded-2xl overflow-hidden
-                                       border border-slate-800
-                                       bg-slate-900/40 backdrop-blur
-                                       hover:border-indigo-500/40
-                                       transition-colors"
+                         border border-slate-800
+                         bg-slate-900/40 backdrop-blur
+                         hover:border-indigo-500/40
+                         transition-colors"
                         >
                             {/* Imagem */}
-                            <Link href={item.href}>
+                            <Link href={item.href} className="block">
                                 <div className="relative h-48 w-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-                                    <Image
-                                        src={item.image}
-                                        alt={item.title}
-                                        fill
-                                        className="object-contain"
-                                    />
+                                    <Image src={item.image} alt={item.title} fill className="object-contain" />
                                 </div>
                             </Link>
 
@@ -63,26 +52,20 @@ export default function HomeFeaturedContent() {
                                     {item.category}
                                 </span>
 
-                                <h3 className="text-lg font-semibold leading-snug">
-                                    {item.title}
-                                </h3>
+                                <h3 className="text-lg font-semibold leading-snug">{item.title}</h3>
 
-                                <p className="text-slate-400 text-sm leading-relaxed">
-                                    {item.excerpt}
-                                </p>
+                                <p className="text-slate-400 text-sm leading-relaxed">{item.excerpt}</p>
 
                                 <Link
                                     href={item.href}
-                                    className="inline-block text-sm font-medium
-                                               text-indigo-400 hover:text-indigo-300"
+                                    className="inline-block text-sm font-medium text-indigo-400 hover:text-indigo-300"
                                 >
-                                    Ler análise →
+                                    Explorar seção →
                                 </Link>
                             </div>
                         </motion.article>
                     ))}
                 </div>
-
             </div>
         </section>
     );
