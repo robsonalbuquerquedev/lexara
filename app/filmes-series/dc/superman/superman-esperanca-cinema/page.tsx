@@ -31,6 +31,8 @@ export async function generateMetadata(): Promise<Metadata> {
         twitterDescription:
             "Uma análise crítica sobre como o Superman se tornou o maior símbolo de esperança do cinema — e por que isso ainda importa.",
 
+        ogImagePath: "/og/superman/og-superman-esperanca-cinema.png",
+
         ogImageAlt:
             "LEXARA — Superman no cinema e o simbolismo da esperança em tempos de crise",
     });
