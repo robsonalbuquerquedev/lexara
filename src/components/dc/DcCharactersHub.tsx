@@ -37,11 +37,11 @@ const DC_CHARACTERS: CharacterHubItem[] = [
         title: "Mulher-Maravilha",
         description:
             "Mito, heroísmo e impacto cultural: uma leitura do papel da personagem no cinema da DC.",
-        href: "/filmes-series/dc/wonder-woman",
+        href: "/filmes-series/dc/mulher-maravilha",
         image: "/images/featured/wonderwoman/mulher-maravilha.png",
-        badge: "Em construção",
-        icon: <Sparkles size={18} />,
-        status: "Em breve",
+        badge: "Seção especial",
+        icon: <Shield size={18} />,
+        status: "Pronto",
     },
 ];
 
