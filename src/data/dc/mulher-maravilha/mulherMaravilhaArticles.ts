@@ -20,17 +20,17 @@ export const mulherMaravilhaArticleArticles: MulherMaravilhaArticle[] = [
         href: "/filmes-series/dc/mulher-maravilha/mulher-maravilha-2017",
         publishedAtISO: "2026-02-02T10:20:00-03:00",
     },
-    // {
-    //     id: 2,
-    //     title:
-    //         "Mulher-Maravilha 1984: ambição, excessos e o preço de um conto de fadas | LEXARA",
-    //     excerpt:
-    //         "Por que WW84 divide tanto: escolhas de tom, nostalgia oitentista, dilemas morais e onde o filme acerta (e exagera) ao transformar desejo em trama.",
-    //     image: "/images/featured/wonderwoman/mulher-maravilha-1984-analise.png",
-    //     category: "Filmes & Séries",
-    //     href: "/filmes-series/dc/mulher-maravilha/mulher-maravilha-1984",
-    //     publishedAtISO: "2026-02-02T11:20:00-03:00",
-    // },
+    {
+        id: 2,
+        title:
+            "Mulher-Maravilha 1984: ambição, excessos e o preço de um conto de fadas | LEXARA",
+        excerpt:
+            "Por que WW84 divide tanto: escolhas de tom, nostalgia oitentista, dilemas morais e onde o filme acerta (e exagera) ao transformar desejo em trama.",
+        image: "/images/featured/wonderwoman/mulher-maravilha-1984-analise.png",
+        category: "Filmes & Séries",
+        href: "/filmes-series/dc/mulher-maravilha/mulher-maravilha-1984",
+        publishedAtISO: "2026-02-02T21:00:00-03:00",
+    },
     // {
     //     id: 3,
     //     title:
