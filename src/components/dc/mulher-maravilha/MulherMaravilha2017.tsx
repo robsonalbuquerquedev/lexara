@@ -46,7 +46,7 @@ export default function MulherMaravilha2017({ article }: MulherMaravilha2017Prop
 
     const jsonLdArticle = {
         "@context": "https://schema.org",
-        "@type": "Article",
+        "@type": "Article", 
         headline: article.title,
         description: article.subtitle,
         datePublished: article.publishedAtISO,
@@ -191,7 +191,7 @@ export default function MulherMaravilha2017({ article }: MulherMaravilha2017Prop
 
                     <p className="mb-3">
                         Em 2017, a DC precisava de uma coisa simples — e justamente por isso difícil — para voltar a
-                        conversar com o público sem parecer que estava sempre “corrigindo rota”: <strong>encanto</strong>.
+                        conversar com o público sem parecer que estava sempre &quot;corrigindo rota&quot;: <strong>encanto</strong>.
                         Não a leveza automática das piadas, nem o cinismo que finge maturidade, nem um espetáculo que grita
                         importância o tempo inteiro. O que faltava era aquela sensação antiga (e poderosa) de que o
                         heroísmo pode ser bonito sem ser ingênuo — bonito porque escolhe significado, não porque foge da
@@ -226,15 +226,15 @@ export default function MulherMaravilha2017({ article }: MulherMaravilha2017Prop
 
                     <p className="mb-3">
                         O filme acerta ao construir Diana como alguém que nasce do mito, mas aprende no contato com o
-                        humano. Vinda de um lugar onde o bem e o mal parecem mais nítidos, ela chega ao chamado “mundo dos
-                        homens” com um olhar quase inocente — e isso não é fragilidade. É <strong>clareza</strong>. Uma
+                        humano. Vinda de um lugar onde o bem e o mal parecem mais nítidos, ela chega ao chamado &quot;mundo dos
+                        homens&quot; com um olhar quase inocente — e isso não é fragilidade. É <strong>clareza</strong>. Uma
                         clareza que não foi ainda corroída por justificativas, por cinismos ou pela normalização da
                         violência.
                     </p>
 
                     <p className="mb-3">
                         Essa clareza, no entanto, vira conflito quando encontra uma realidade suja, confusa e cheia de
-                        “meios-termos”. Diana não entende por que o mundo aceita o horror como rotina, por que a guerra
+                        &quot;meios-termos&quot;. Diana não entende por que o mundo aceita o horror como rotina, por que a guerra
                         pode virar estatística ou por que a crueldade precisa sempre de uma desculpa elegante. É nesse
                         choque que nasce a pergunta central do filme — e da personagem no cinema:{" "}
                         <strong>como ser um símbolo sem virar propaganda?</strong> Como manter valores sem transformar
@@ -246,7 +246,7 @@ export default function MulherMaravilha2017({ article }: MulherMaravilha2017Prop
                             <p className="text-sm font-semibold text-slate-100">O que o filme entende muito bem</p>
                             <p className="mt-2 text-sm text-slate-300">
                                 Diana não vira heroína quando aprende a lutar — isso ela já sabe desde o início. Ela vira
-                                heroína quando decide <strong>se responsabilizar</strong> por um mundo que não é “puro”,
+                                heroína quando decide <strong>se responsabilizar</strong> por um mundo que não é &quot;puro&quot;,
                                 que não funciona por absolutos e que frequentemente decepciona. Mesmo assim, ela escolhe
                                 agir. O heroísmo nasce quando o mito aceita o peso da realidade sem abrir mão de seus
                                 princípios.
@@ -278,7 +278,7 @@ export default function MulherMaravilha2017({ article }: MulherMaravilha2017Prop
                     </p>
 
                     <p className="mb-3">
-                        Nesse contexto, Diana busca uma explicação total, quase reconfortante: “é Ares, pronto”. A lógica é
+                        Nesse contexto, Diana busca uma explicação total, quase reconfortante: &quot;é Ares, pronto&quot;. A lógica é
                         simples — se existe um vilão absoluto, basta derrotá-lo e o mundo volta ao eixo. O roteiro acerta
                         quando não entrega essa resposta com facilidade. A guerra insiste em ser mais complexa do que um
                         único inimigo, mais difusa do que um rosto para culpar. E quando o filme respira, ele revela algo
@@ -289,7 +289,7 @@ export default function MulherMaravilha2017({ article }: MulherMaravilha2017Prop
                         É nesse ponto que a esperança da Diana deixa de ser ingênua e passa a ser uma escolha consciente.
                         Ela percebe que acabar com o mal não é um gesto único, épico e limpo — é um processo imperfeito,
                         cheio de perdas, dúvidas e frustrações. Ainda assim, agir continua sendo necessário. O dilema
-                        moral não está em “vencer a guerra”, mas em decidir quem você se torna enquanto tenta enfrentá-la.
+                        moral não está em &quot;vencer a guerra&quot;, mas em decidir quem você se torna enquanto tenta enfrentá-la.
                     </p>
 
                     <h2
@@ -302,7 +302,7 @@ export default function MulherMaravilha2017({ article }: MulherMaravilha2017Prop
                     <p className="mb-3">
                         A direção de <em>Mulher-Maravilha</em> aposta em algo que se tornou raro em grandes franquias: tempo.
                         Tempo para olhares, para silêncio, para o contraste entre beleza e ruína. Esses pequenos respiros
-                        constroem o que o filme chama, na prática, de “encanto”. Não é um truque visual nem um discurso
+                        constroem o que o filme chama, na prática, de &quot;encanto&quot;. Não é um truque visual nem um discurso
                         inflamado — é a decisão consciente de deixar a emoção existir sem ironia. O filme não tem medo de
                         parecer sincero e, no cinema contemporâneo, isso é quase um superpoder.
                     </p>
@@ -312,7 +312,7 @@ export default function MulherMaravilha2017({ article }: MulherMaravilha2017Prop
                         melhor quando é consequência de valores, e não apenas de coreografia ou escala. A cena mais
                         memorável — aquela que ficou gravada no imaginário coletivo — não é lembrada pela explosão ou
                         pela pose, mas porque traduz a ideia central da personagem: <strong>abrir caminho</strong>. Não
-                        “aparecer por aparecer”, não provar superioridade, mas avançar para proteger quem não pode.
+                        &quot;aparecer por aparecer&quot;, não provar superioridade, mas avançar para proteger quem não pode.
                     </p>
 
                     <h3 className="mt-10 mb-10 text-xl font-semibold text-slate-200 md:text-2xl">
@@ -345,7 +345,7 @@ export default function MulherMaravilha2017({ article }: MulherMaravilha2017Prop
                     <p className="mb-3">
                         Ao apostar em uma protagonista que acredita no que faz — e que não pede desculpas por isso — o
                         filme ajudou a abrir espaço para uma outra sensibilidade dentro do gênero. Ele mostrou que uma
-                        personagem icônica não precisa ser “desmontada” para parecer moderna ou relevante. Às vezes, o
+                        personagem icônica não precisa ser &quot;desmontada&quot; para parecer moderna ou relevante. Às vezes, o
                         gesto mais contemporâneo é justamente recuperar o básico: propósito claro, valores reconhecíveis
                         e emoção tratada com seriedade.
                     </p>
@@ -377,7 +377,7 @@ export default function MulherMaravilha2017({ article }: MulherMaravilha2017Prop
                     <p className="mb-3">
                         O que envelhece melhor em <em>Mulher-Maravilha (2017)</em> é o seu núcleo dramático: Diana como um
                         símbolo que não perde humanidade ao longo da narrativa. O filme entende que heroísmo não se resume
-                        a “ganhar” batalhas ou derrotar inimigos visíveis, mas a <strong>não virar pedra</strong> por
+                        a &quot;ganhar&quot; batalhas ou derrotar inimigos visíveis, mas a <strong>não virar pedra</strong> por
                         dentro — a não permitir que o mundo endureça aquilo que dá sentido à luta.
                     </p>
 
@@ -410,7 +410,7 @@ export default function MulherMaravilha2017({ article }: MulherMaravilha2017Prop
                     </p>
 
                     <p className="mb-3">
-                        Diana funciona porque não é “invencível” no sentido emocional. Ela sente, se frustra, se decepciona
+                        Diana funciona porque não é &quot;invencível&quot; no sentido emocional. Ela sente, se frustra, se decepciona
                         e aprende no contato direto com a realidade. Ainda assim, decide agir. O heroísmo aqui não nasce da
                         ausência de dúvida, mas da escolha consciente de não endurecer diante do horror. O encanto retorna
                         quando a narrativa permite que a heroína respire como pessoa, e não apenas como ícone.
