@@ -31,17 +31,17 @@ export const mulherMaravilhaArticleArticles: MulherMaravilhaArticle[] = [
         href: "/filmes-series/dc/mulher-maravilha/mulher-maravilha-1984",
         publishedAtISO: "2026-02-02T21:00:00-03:00",
     },
-    // {
-    //     id: 3,
-    //     title:
-    //         "Gal Gadot como Mulher-Maravilha: carisma, limites e o impacto cultural da era Snyder | LEXARA",
-    //     excerpt:
-    //         "O que define a Diana da era DCEU: presença, fisicalidade, iconografia e as escolhas de direção que moldaram uma Mulher-Maravilha mais épica do que íntima.",
-    //     image: "/images/featured/wonderwoman/gal-gadot-mulher-maravilha-era-snyder.png",
-    //     category: "Filmes & Séries",
-    //     href: "/filmes-series/dc/mulher-maravilha/gal-gadot-dceu",
-    //     publishedAtISO: "2026-02-02T14:05:00-03:00",
-    // },
+    {
+        id: 3,
+        title:
+            "Gal Gadot como Mulher-Maravilha: carisma, limites e o impacto cultural da era Snyder | LEXARA",
+        excerpt:
+            "O que define a Diana da era DCEU: presença, fisicalidade, iconografia e as escolhas de direção que moldaram uma Mulher-Maravilha mais épica do que íntima.",
+        image: "/images/featured/wonderwoman/gal-gadot-mulher-maravilha-era-snyder.png",
+        category: "Filmes & Séries",
+        href: "/filmes-series/dc/mulher-maravilha/gal-gadot-dceu",
+        publishedAtISO: "2026-02-03T11:00:00-03:00",
+    },
     // {
     //     id: 4,
     //     title:
