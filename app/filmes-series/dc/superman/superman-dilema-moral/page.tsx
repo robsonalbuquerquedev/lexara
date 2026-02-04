@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import SupermanDilemaMoral from "@/components/dc/superman/SupermanDilemaMoral";
 import { buildArticleMetadata } from "@/lib/seo/build-article-metadata";
 import { supermanDilemaMoralArticle } from "@/content/articles/superman/superman-dilema-moral";
+import ShareBar from "@/components/share/ShareBar";
+import HomeNewsletter from "@/components/HomeNewsletter";
 
 export async function generateMetadata(): Promise<Metadata> {
     return buildArticleMetadata({
@@ -45,6 +47,14 @@ export const revalidate = 60;
 
 export default function SupermanDilemaMoralPage() {
     return (
-        <SupermanDilemaMoral article={supermanDilemaMoralArticle} />
+        <>
+            <SupermanDilemaMoral article={supermanDilemaMoralArticle} />
+            <ShareBar
+                title={supermanDilemaMoralArticle.title}
+                slug={supermanDilemaMoralArticle.slug}
+                canonicalBase="https://lexara.com.br"
+            />
+            <HomeNewsletter />
+        </>
     )
 }
