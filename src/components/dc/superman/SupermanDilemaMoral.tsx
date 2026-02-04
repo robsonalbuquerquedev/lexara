@@ -413,17 +413,42 @@ export default function SupermanDilemaMoral({ article }: SupermanDilemaMoralProp
                         personagem. Porque, em um mundo obcecado por força, o verdadeiro heroísmo talvez esteja em saber até onde não ir.
                     </p>
 
+                    {/* CTA interno — sequência editorial Superman (Dilema moral) */}
                     <div className="not-prose my-12 rounded-2xl border border-slate-800 bg-slate-950/40 p-6">
-                        <p className="text-sm font-semibold text-slate-100">Continue no LEXARA</p>
+                        <p className="text-sm font-semibold text-slate-100">
+                            Continue no LEXARA
+                        </p>
+
                         <p className="mt-2 text-sm text-slate-300">
-                            Quer ir além deste artigo? Explore mais análises de personagens e como o cinema contemporâneo reposiciona mitos clássicos
-                            para dialogar com o nosso tempo.
+                            Se este texto foi seu ponto de partida, vale voltar um passo para comparar versões e decisões de tom
+                            — e então seguir para o que muda quando o DCU entra em cena.
                         </p>
 
                         <div className="mt-4 flex flex-wrap gap-3">
                             <Link
-                                href="/filmes-series/dc/superman"
+                                href="/filmes-series/dc/superman/superman-versoes-cinema"
                                 className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950 hover:opacity-90"
+                            >
+                                Voltar: versões do Superman <ArrowRight size={16} />
+                            </Link>
+
+                            <Link
+                                href="/filmes-series/dc/superman/superman-esperanca-cinema"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
+                            >
+                                Ler: esperança no cinema <ArrowRight size={16} />
+                            </Link>
+
+                            <Link
+                                href="/filmes-series/dc/superman/superman-dcu-futuro"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
+                            >
+                                Próximo: o futuro do Superman no DCU <ArrowRight size={16} />
+                            </Link>
+
+                            <Link
+                                href="/filmes-series/dc/superman"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
                             >
                                 Ver a seção Superman <ArrowRight size={16} />
                             </Link>
@@ -432,7 +457,7 @@ export default function SupermanDilemaMoral({ article }: SupermanDilemaMoralProp
                                 href="/filmes-series/dc"
                                 className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
                             >
-                                Explorar DC <ArrowRight size={16} />
+                                Explorar o hub DC <ArrowRight size={16} />
                             </Link>
                         </div>
                     </div>
