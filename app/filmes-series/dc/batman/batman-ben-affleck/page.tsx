@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import BatmanBenAffleck from "@/components/dc/batman/BatmanBenAffleck";
 import { buildArticleMetadata } from "@/lib/seo/build-article-metadata";
 import { batmanBenAffleckArticle } from "@/content/articles/batman/ben-affleck";
+import ShareBar from "@/components/share/ShareBar";
+import HomeNewsletter from "@/components/HomeNewsletter";
 
 export async function generateMetadata(): Promise<Metadata> {
     return buildArticleMetadata({
@@ -44,6 +46,14 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function BatmanBenAffleckPage() {
     return (
-        <BatmanBenAffleck article={batmanBenAffleckArticle} />
+        <>
+            <BatmanBenAffleck article={batmanBenAffleckArticle} />
+            <ShareBar
+                title={batmanBenAffleckArticle.title}
+                slug={batmanBenAffleckArticle.slug}
+                canonicalBase="https://lexara.com.br"
+            />
+            <HomeNewsletter />
+        </>
     )
 }
