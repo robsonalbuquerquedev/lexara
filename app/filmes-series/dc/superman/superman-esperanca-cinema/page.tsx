@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import SupermanEsperancaCinema from "@/components/dc/superman/SupermanEsperancaCinema";
 import { buildArticleMetadata } from "@/lib/seo/build-article-metadata";
 import { supermanEsperancaCinemaArticle } from "@/content/articles/superman/superman-esperanca-cinema";
+import ShareBar from "@/components/share/ShareBar";
+import HomeNewsletter from "@/components/HomeNewsletter";
 
 export async function generateMetadata(): Promise<Metadata> {
     return buildArticleMetadata({
@@ -42,6 +44,14 @@ export const revalidate = 60;
 
 export default function SupermanEsperancaCinemaPage() {
     return (
-        <SupermanEsperancaCinema article={supermanEsperancaCinemaArticle} />
+        <>
+            <SupermanEsperancaCinema article={supermanEsperancaCinemaArticle} />
+            <ShareBar
+                title={supermanEsperancaCinemaArticle.title}
+                slug={supermanEsperancaCinemaArticle.slug}
+                canonicalBase="https://lexara.com.br"
+            />
+            <HomeNewsletter />
+        </>
     )
 }
