@@ -446,7 +446,7 @@ export default function MulherMaravilha2017({ article }: MulherMaravilha2017Prop
                             </Link>
 
                             <Link
-                                href="/filmes-series/dc/mulher-maravilha/futuro-dcu"
+                                href="/filmes-series/dc/mulher-maravilha/mulher-maravilha-futuro-dcu"
                                 className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
                             >
                                 Futuro da personagem no DCU <ArrowRight size={16} />
