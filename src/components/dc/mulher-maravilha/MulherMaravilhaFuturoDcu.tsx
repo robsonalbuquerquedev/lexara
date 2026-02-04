@@ -470,6 +470,14 @@ export default function MulherMaravilhaFuturoDcu({
                             >
                                 Explorar o hub DC <ArrowRight size={16} />
                             </Link>
+
+                            {/* Ponte opcional para variar universo (sem competir com a trindade)
+                            <Link
+                                href="/filmes-series/marvel"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
+                            >
+                                Explorar Marvel <ArrowRight size={16} />
+                            </Link> */}
                         </div>
                     </div>
 
