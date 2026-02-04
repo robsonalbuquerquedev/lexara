@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import GalGadotDceu from "@/components/dc/mulher-maravilha/GalGadotDceu";
 import { buildArticleMetadata } from "@/lib/seo/build-article-metadata";
 import { galGadotDceuArticle } from "@/content/articles/mulher-maravilha/gal-gadot-dceu";
+import ShareBar from "@/components/share/ShareBar";
+import HomeNewsletter from "@/components/HomeNewsletter";
 
 export async function generateMetadata(): Promise<Metadata> {
     return buildArticleMetadata({
@@ -48,6 +50,14 @@ export const revalidate = 60;
 
 export default function GalGadotDceuPage() {
     return (
-        <GalGadotDceu article={galGadotDceuArticle} />
+        <>
+            <GalGadotDceu article={galGadotDceuArticle} />
+            <ShareBar
+                title={galGadotDceuArticle.title}
+                slug={galGadotDceuArticle.slug}
+                canonicalBase="https://lexara.com.br"
+            />
+            <HomeNewsletter />
+        </>
     )
 }
