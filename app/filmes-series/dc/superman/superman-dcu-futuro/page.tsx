@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import SupermanDcuFuturo from "@/components/dc/superman/SupermanDcuFuturo";
 import { buildArticleMetadata } from "@/lib/seo/build-article-metadata";
 import { supermanDcuFuturoArticle } from "@/content/articles/superman/superman-dcu-futuro";
+import ShareBar from "@/components/share/ShareBar";
+import HomeNewsletter from "@/components/HomeNewsletter";
 
 export async function generateMetadata(): Promise<Metadata> {
     return buildArticleMetadata({
@@ -42,6 +44,14 @@ export const revalidate = 60;
 
 export default function SupermanDcuFuturoPage() {
     return (
-        <SupermanDcuFuturo article={supermanDcuFuturoArticle} />
+        <>
+            <SupermanDcuFuturo article={supermanDcuFuturoArticle} />
+            <ShareBar
+                title={supermanDcuFuturoArticle.title}
+                slug={supermanDcuFuturoArticle.slug}
+                canonicalBase="https://lexara.com.br"
+            />
+            <HomeNewsletter />
+        </>
     )
 }
