@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import MulherMaravilha1984 from "@/components/dc/mulher-maravilha/MulherMaravilha1984";
 import { buildArticleMetadata } from "@/lib/seo/build-article-metadata";
 import { mulherMaravilha1984Article } from "@/content/articles/mulher-maravilha/mulher-maravilha-1984";
+import ShareBar from "@/components/share/ShareBar";
+import HomeNewsletter from "@/components/HomeNewsletter";
 
 export async function generateMetadata(): Promise<Metadata> {
     return buildArticleMetadata({
@@ -44,6 +46,14 @@ export const revalidate = 60;
 
 export default function MulherMaravilha1984Page() {
     return (
-        <MulherMaravilha1984 article={mulherMaravilha1984Article} />
+        <>
+            <MulherMaravilha1984 article={mulherMaravilha1984Article} />
+            <ShareBar
+                title={mulherMaravilha1984Article.title}
+                slug={mulherMaravilha1984Article.slug}
+                canonicalBase="https://lexara.com.br"
+            />
+            <HomeNewsletter />
+        </>
     )
 }
