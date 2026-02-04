@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, CheckCircle2, Loader2 } from "lucide-react";
+import { Mail, CheckCircle2, Loader2, MessageCircle, ArrowUpRight } from "lucide-react";
+
+const WHATSAPP_CHANNEL_URL =
+    "https://whatsapp.com/channel/0029Vb6y0nIAe5VsagEmvV3K";
 
 export default function HomeNewsletter() {
     const [submitted, setSubmitted] = useState(false);
@@ -11,7 +14,7 @@ export default function HomeNewsletter() {
         e.preventDefault();
         setLoading(true);
 
-        const formEl = e.currentTarget; // guarda referência do form
+        const formEl = e.currentTarget;
         const formData = new FormData(formEl);
 
         formData.append("source", "LEXARA | Home Newsletter");
@@ -26,20 +29,17 @@ export default function HomeNewsletter() {
                 }
             );
 
-            // Alguns casos: email chega, mas response pode não ser ok por algum detalhe.
-            // Vamos tentar interpretar o retorno com segurança.
             let data: any = null;
             try {
                 data = await response.json();
             } catch {
-                // se não vier JSON, seguimos com a avaliação pelo status
+                // ignore JSON parsing errors
             }
 
             const isSuccess =
                 response.ok || (data && (data.success === "true" || data.success === true));
 
             if (isSuccess) {
-                // Reset ANTES de esconder o form (evita null)
                 formEl.reset();
                 setSubmitted(true);
                 return;
@@ -48,10 +48,9 @@ export default function HomeNewsletter() {
             alert("Erro ao enviar. Tente novamente.");
         } catch (error) {
             console.error(error);
-
-            // Como você já confirmou que o email chega,
-            // aqui é melhor não assustar o usuário com "erro de conexão".
-            alert("Recebemos sua inscrição! Se não aparecer a confirmação agora, tente novamente em instantes.");
+            alert(
+                "Recebemos sua inscrição! Se não aparecer a confirmação agora, tente novamente em instantes."
+            );
             setSubmitted(true);
         } finally {
             setLoading(false);
@@ -76,6 +75,25 @@ export default function HomeNewsletter() {
                         Um e-mail quando sair conteúdo novo. Sem spam, sem enrolação. Só
                         cultura geek em análise.
                     </p>
+
+                    {/* WhatsApp Channel CTA (leve e editorial) */}
+                    <div className="mt-6 flex justify-center">
+                        <a
+                            href={WHATSAPP_CHANNEL_URL}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="inline-flex items-center gap-2 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/10 px-5 py-3 text-sm font-semibold text-slate-100 transition-colors"
+                            aria-label="Entrar no canal do LEXARA no WhatsApp"
+                        >
+                            <MessageCircle className="w-5 h-5" />
+                            Canal do WhatsApp
+                            <ArrowUpRight className="w-4 h-4 opacity-80" />
+                        </a>
+                    </div>
+
+                    <p className="text-slate-400 mt-3 max-w-2xl mx-auto text-xs md:text-sm">
+                        Prefere avisos rápidos? Entre no canal para receber novos links e curadoria direto no WhatsApp.
+                    </p>
                 </header>
 
                 {!submitted ? (
@@ -84,7 +102,7 @@ export default function HomeNewsletter() {
                         className="max-w-2xl mx-auto"
                         aria-label="Newsletter form"
                     >
-                        {/* Honeypot anti-spam (bots tendem a preencher) */}
+                        {/* Honeypot anti-spam */}
                         <input
                             type="text"
                             name="_honey"
@@ -93,11 +111,14 @@ export default function HomeNewsletter() {
                             className="hidden"
                         />
 
-                        {/* Configs úteis do FormSubmit */}
-                        <input type="hidden" name="_subject" value="Novo inscrito na Newsletter | LEXARA" />
+                        {/* FormSubmit configs */}
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="Novo inscrito na Newsletter | LEXARA"
+                        />
                         <input type="hidden" name="_template" value="table" />
                         <input type="hidden" name="_captcha" value="false" />
-                        {/* Você pode ativar captcha depois se quiser: true */}
 
                         <div className="flex flex-col md:flex-row gap-3">
                             <label className="w-full">
@@ -131,6 +152,30 @@ export default function HomeNewsletter() {
                             Ao se inscrever, você concorda em receber e-mails do LEXARA. Você
                             pode sair a qualquer momento.
                         </p>
+
+                        {/* Secondary CTA (depois do form) */}
+                        <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
+                            <p className="text-slate-200 text-sm font-semibold">
+                                Quer o caminho mais rápido?
+                            </p>
+                            <p className="mt-1 text-slate-400 text-xs md:text-sm">
+                                O canal do WhatsApp é ideal para receber novos artigos e “ordem de leitura” sem depender do e-mail.
+                            </p>
+
+                            <div className="mt-3 flex justify-center">
+                                <a
+                                    href={WHATSAPP_CHANNEL_URL}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    className="inline-flex items-center gap-2 rounded-2xl bg-emerald-500/15 hover:bg-emerald-500/20 border border-emerald-400/20 px-5 py-3 text-sm font-semibold text-emerald-200 transition-colors"
+                                    aria-label="Entrar no canal do LEXARA no WhatsApp"
+                                >
+                                    <MessageCircle className="w-5 h-5" />
+                                    Entrar no canal do WhatsApp
+                                    <ArrowUpRight className="w-4 h-4 opacity-80" />
+                                </a>
+                            </div>
+                        </div>
                     </form>
                 ) : (
                     <div className="max-w-2xl mx-auto text-center">
@@ -145,6 +190,30 @@ export default function HomeNewsletter() {
                         <p className="text-slate-300 mt-3">
                             Pronto! Quando sair artigo novo, você vai ficar sabendo. 😄
                         </p>
+
+                        {/* Pós-confirmação: empurra pro WhatsApp (sem ser insistente) */}
+                        <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5">
+                            <p className="text-slate-100 font-semibold">
+                                Quer receber também pelo WhatsApp?
+                            </p>
+                            <p className="text-slate-400 mt-2 text-sm">
+                                O canal do LEXARA entrega avisos rápidos e links de leitura — bom para não perder nada.
+                            </p>
+
+                            <div className="mt-4 flex justify-center">
+                                <a
+                                    href={WHATSAPP_CHANNEL_URL}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    className="inline-flex items-center gap-2 rounded-2xl bg-emerald-500/15 hover:bg-emerald-500/20 border border-emerald-400/20 text-emerald-200 px-6 py-3 font-semibold transition-colors"
+                                    aria-label="Entrar no canal do LEXARA no WhatsApp"
+                                >
+                                    <MessageCircle className="w-5 h-5" />
+                                    Entrar no canal
+                                    <ArrowUpRight className="w-4 h-4 opacity-80" />
+                                </a>
+                            </div>
+                        </div>
 
                         <button
                             onClick={() => setSubmitted(false)}
