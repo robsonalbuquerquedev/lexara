@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import BatmanEvolucao from "@/components/dc/batman/BatmanEvolucao";
 import { buildArticleMetadata } from "@/lib/seo/build-article-metadata";
 import { batmanEvolucaoArticle } from "@/content/articles/batman/batman-evolucao";
+import ShareBar from "@/components/share/ShareBar";
+import HomeNewsletter from "@/components/HomeNewsletter";
 
 export async function generateMetadata(): Promise<Metadata> {
     return buildArticleMetadata({
@@ -42,6 +44,14 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function BatmanEvolucaoPage() {
     return (
-        <BatmanEvolucao article={batmanEvolucaoArticle} />
+        <>
+            <BatmanEvolucao article={batmanEvolucaoArticle} />
+            <ShareBar
+                title={batmanEvolucaoArticle.title}
+                slug={batmanEvolucaoArticle.slug}
+                canonicalBase="https://lexara.com.br"
+            />
+            <HomeNewsletter />
+        </>
     )
 }
