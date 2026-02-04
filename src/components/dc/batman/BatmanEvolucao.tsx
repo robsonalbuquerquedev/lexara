@@ -433,26 +433,44 @@ export default function BatmanEvolucao({ article }: BatmanEvolucaoProps) {
                         Batman olhando de volta do espelho.
                     </p>
 
-                    {/* CTA interno */}
+                    {/* CTA interno — sequência editorial Batman */}
                     <div className="not-prose my-12 rounded-2xl border border-slate-800 bg-slate-950/40 p-6">
-                        <p className="text-sm font-semibold text-slate-100">Continue no LEXARA</p>
+                        <p className="text-sm font-semibold text-slate-100">
+                            Continue no LEXARA
+                        </p>
+
                         <p className="mt-2 text-sm text-slate-300">
-                            Quer ir além deste artigo? Explore a seção especial do Batman no LEXARA, com análises por fase, interpretações marcantes e os caminhos do herói no cinema.
+                            Se este foi seu ponto de partida, aqui está a sequência natural de leitura
+                            para entender as diferentes fases, interpretações e rumos do Batman no cinema.
                         </p>
 
                         <div className="mt-4 flex flex-wrap gap-3">
                             <Link
-                                href="/filmes-series/dc/batman"
+                                href="/filmes-series/dc/batman/batman-ben-affleck"
                                 className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950 hover:opacity-90"
                             >
-                                Ver a seção Batman <ArrowRight size={16} />
+                                Próximo: Batman de Ben Affleck <ArrowRight size={16} />
+                            </Link>
+
+                            <Link
+                                href="/filmes-series/dc/batman/batman-pattinson"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
+                            >
+                                Batman de Robert Pattinson <ArrowRight size={16} />
+                            </Link>
+
+                            <Link
+                                href="/filmes-series/dc/batman/batman-dcu-futuro"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
+                            >
+                                O futuro do Batman no DCU <ArrowRight size={16} />
                             </Link>
 
                             <Link
                                 href="/filmes-series/dc"
                                 className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
                             >
-                                Explorar DC <ArrowRight size={16} />
+                                Explorar o hub DC <ArrowRight size={16} />
                             </Link>
                         </div>
                     </div>
