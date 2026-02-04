@@ -464,14 +464,21 @@ export default function MulherMaravilha1984({
                                 href="/filmes-series/dc/mulher-maravilha/gal-gadot-dceu"
                                 className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950 hover:opacity-90"
                             >
-                                Gal Gadot no DCEU <ArrowRight size={16} />
+                                Próximo: Gal Gadot no DCEU <ArrowRight size={16} />
                             </Link>
 
                             <Link
-                                href="/filmes-series/dc/mulher-maravilha/futuro-dcu"
+                                href="/filmes-series/dc/mulher-maravilha/mulher-maravilha-futuro-dcu"
                                 className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
                             >
                                 Futuro da personagem no DCU <ArrowRight size={16} />
+                            </Link>
+
+                            <Link
+                                href="/filmes-series/dc/mulher-maravilha"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
+                            >
+                                Voltar à seção Mulher-Maravilha <ArrowRight size={16} />
                             </Link>
 
                             <Link
