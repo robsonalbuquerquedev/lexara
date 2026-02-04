@@ -8,7 +8,7 @@ export const batmanBenAffleckArticle = createArticle({
     categoryHref: "/filmes-series/dc",
     topic: "Batman",
     topicHref: "/filmes-series/dc/batman",
-    slug: "/filmes-series/dc/batman/ben-affleck",
+    slug: "/filmes-series/dc/batman/batman-ben-affleck",
     publishedAtISO: "2026-01-29T15:42:00-03:00",
     publishedAtLabel: "29.01.2026, às 15H42",
     readingTime: "3 min de leitura",

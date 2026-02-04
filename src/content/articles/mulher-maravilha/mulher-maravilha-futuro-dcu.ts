@@ -15,7 +15,7 @@ export const mulherMaravilhaFuturoDcuArticle = createArticle({
 
     topicHref: "/filmes-series/dc/mulher-maravilha",
 
-    slug: "/filmes-series/dc/mulher-maravilha/futuro-dcu",
+    slug: "/filmes-series/dc/mulher-maravilha/mulher-maravilha-futuro-dcu",
 
     publishedAtISO: "2026-02-03T15:00:00-03:00",
 

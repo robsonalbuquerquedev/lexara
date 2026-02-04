@@ -8,7 +8,7 @@ export const batmanEvolucaoArticle = createArticle({
     categoryHref: "/filmes-series/dc",
     topic: "Batman",
     topicHref: "/filmes-series/dc/batman",
-    slug: "/filmes-series/dc/batman/a-evolucao-do-heroi-nas-telonas",
+    slug: "/filmes-series/dc/batman/batman-evolucao",
     publishedAtISO: "2026-01-19T14:30:00-03:00",
     publishedAtLabel: "19.01.2026, às 14H30",
     readingTime: "3 min de leitura",
