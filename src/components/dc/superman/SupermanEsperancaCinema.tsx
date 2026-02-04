@@ -59,7 +59,7 @@ export default function SupermanEsperancaCinema({ article }: SupermanEsperancaCi
             </section>
         );
     }
-    
+
     const jsonLdArticle = {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -404,26 +404,45 @@ export default function SupermanEsperancaCinema({ article }: SupermanEsperancaCi
                         quando ninguém está olhando, quando não há aplauso nem garantia de vitória, você ainda escolhe ser bom?
                     </p>
 
+                    {/* CTA interno — sequência editorial Superman */}
                     <div className="not-prose my-12 rounded-2xl border border-slate-800 bg-slate-950/40 p-6">
-                        <p className="text-sm font-semibold text-slate-100">Continue no LEXARA</p>
+                        <p className="text-sm font-semibold text-slate-100">
+                            Continue no LEXARA
+                        </p>
+
                         <p className="mt-2 text-sm text-slate-300">
-                            Quer ir além deste artigo? Explore a seção do Superman e descubra outras análises sobre símbolos,
-                            dilemas morais e o papel da DC no cinema contemporâneo.
+                            Se este foi seu ponto de partida, siga a ordem de leitura recomendada
+                            para entender as diferentes versões do Superman, seus dilemas morais
+                            e o futuro do herói no cinema.
                         </p>
 
                         <div className="mt-4 flex flex-wrap gap-3">
                             <Link
-                                href={article.topicHref}
+                                href="/filmes-series/dc/superman/superman-versoes-cinema"
                                 className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950 hover:opacity-90"
                             >
-                                Ver a seção Superman <ArrowRight size={16} />
+                                Próximo: versões do Superman <ArrowRight size={16} />
                             </Link>
 
                             <Link
-                                href={article.categoryHref}
+                                href="/filmes-series/dc/superman/superman-dilema-moral"
                                 className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
                             >
-                                Explorar DC <ArrowRight size={16} />
+                                O dilema moral do herói <ArrowRight size={16} />
+                            </Link>
+
+                            <Link
+                                href="/filmes-series/dc/superman/superman-dcu-futuro"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
+                            >
+                                O futuro do Superman no DCU <ArrowRight size={16} />
+                            </Link>
+
+                            <Link
+                                href="/filmes-series/dc"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
+                            >
+                                Explorar o hub DC <ArrowRight size={16} />
                             </Link>
                         </div>
                     </div>
