@@ -60,7 +60,7 @@ export default function SupermanVersoesCinema({ article }: SupermanVersoesCinema
             </section>
         );
     }
-    
+
     const jsonLdArticle = {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -447,26 +447,51 @@ export default function SupermanVersoesCinema({ article }: SupermanVersoesCinema
                         de Aço continua relevante — geração após geração.
                     </p>
 
+                    {/* CTA interno — sequência editorial Superman */}
                     <div className="not-prose my-12 rounded-2xl border border-slate-800 bg-slate-950/40 p-6">
-                        <p className="text-sm font-semibold text-slate-100">Continue no LEXARA</p>
+                        <p className="text-sm font-semibold text-slate-100">
+                            Continue no LEXARA
+                        </p>
+
                         <p className="mt-2 text-sm text-slate-300">
-                            Quer continuar nessa linha de &quot;como a DC se reinventa&quot;? Explore a seção do Superman ou compare com o
-                            caminho do Batman no cinema.
+                            Se este foi seu ponto de partida, a leitura agora aprofunda o que realmente muda de uma versão para outra:
+                            escolhas morais, tom e o tipo de esperança que cada fase tenta sustentar. E, se quiser, dá para comparar esse caminho com o do Batman.
                         </p>
 
                         <div className="mt-4 flex flex-wrap gap-3">
                             <Link
-                                href="/filmes-series/dc/superman"
+                                href="/filmes-series/dc/superman/superman-dilema-moral"
                                 className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950 hover:opacity-90"
                             >
-                                Ver a seção Superman <ArrowRight size={16} />
+                                Próximo: o dilema moral do herói <ArrowRight size={16} />
                             </Link>
 
                             <Link
-                                href="/filmes-series/dc/batman"
+                                href="/filmes-series/dc/superman/superman-dcu-futuro"
                                 className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
                             >
-                                Comparar com Batman <ArrowRight size={16} />
+                                O futuro do Superman no DCU <ArrowRight size={16} />
+                            </Link>
+
+                            <Link
+                                href="/filmes-series/dc/batman/batman-evolucao"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
+                            >
+                                Comparar com o caminho do Batman <ArrowRight size={16} />
+                            </Link>
+
+                            <Link
+                                href="/filmes-series/dc/superman"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
+                            >
+                                Voltar à seção Superman <ArrowRight size={16} />
+                            </Link>
+
+                            <Link
+                                href="/filmes-series/dc"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
+                            >
+                                Explorar o hub DC <ArrowRight size={16} />
                             </Link>
                         </div>
                     </div>
