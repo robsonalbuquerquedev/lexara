@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import MulherMaravilhaFuturoDcu from "@/components/dc/mulher-maravilha/MulherMaravilhaFuturoDcu";
 import { buildArticleMetadata } from "@/lib/seo/build-article-metadata";
 import { mulherMaravilhaFuturoDcuArticle } from "@/content/articles/mulher-maravilha/mulher-maravilha-futuro-dcu";
+import ShareBar from "@/components/share/ShareBar";
+import HomeNewsletter from "@/components/HomeNewsletter";
 
 export async function generateMetadata(): Promise<Metadata> {
     return buildArticleMetadata({
@@ -42,6 +44,14 @@ export const revalidate = 60;
 
 export default function MulherMaravilhaFuturoDcuPage() {
     return (
-        <MulherMaravilhaFuturoDcu article={mulherMaravilhaFuturoDcuArticle} />
+        <>
+            <MulherMaravilhaFuturoDcu article={mulherMaravilhaFuturoDcuArticle} />
+            <ShareBar
+                title={mulherMaravilhaFuturoDcuArticle.title}
+                slug={mulherMaravilhaFuturoDcuArticle.slug}
+                canonicalBase="https://lexara.com.br"
+            />
+            <HomeNewsletter />
+        </>
     )
 }
