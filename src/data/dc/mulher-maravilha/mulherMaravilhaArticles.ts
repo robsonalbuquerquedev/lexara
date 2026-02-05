@@ -8,7 +8,7 @@ export type MulherMaravilhaArticle = {
     publishedAtISO?: string;
 };
 
-export const mulherMaravilhaArticleArticles: MulherMaravilhaArticle[] = [
+export const mulherMaravilhaArticles: MulherMaravilhaArticle[] = [
     {
         id: 1,
         title:

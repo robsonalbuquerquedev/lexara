@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { allArticles } from "@/data/articles/allArticles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://lexara.com.br";
@@ -54,19 +55,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "curiosidades/numeros-recordes-impacto",
     ];
 
-    return [
-        ...staticRoutes.map((route) => ({
-            url: `${baseUrl}/${route}`,
-            lastModified: new Date(),
-            changeFrequency: "monthly" as const,
-            priority: route === "" ? 1.0 : 0.8,
-        })),
+    // ✅ Artigos dinâmicos via data layer
+    const articleRoutes: MetadataRoute.Sitemap = allArticles
+        .filter((a) => !!a.href)
+        .map((a) => {
+            // garante URL absoluta (se href já vier absoluto, mantém)
+            const url = a.href.startsWith("http")
+                ? a.href
+                : `${baseUrl}${a.href.startsWith("/") ? "" : "/"}${a.href}`;
 
-        ...moduleRoutes.map((route) => ({
-            url: `${baseUrl}/${route}`,
-            lastModified: new Date(),
-            changeFrequency: "weekly" as const,
-            priority: 0.7,
-        })),
-    ];
+            // se tiver publishedAtISO, usa como lastModified (melhor que new Date())
+            const lastModified = a.publishedAtISO ? new Date(a.publishedAtISO) : new Date();
+
+            return {
+                url,
+                lastModified,
+                changeFrequency: "monthly" as const,
+                priority: 0.6,
+            };
+        });
+
+    // ✅ Remove duplicadas (caso algum href bata com moduleRoutes no futuro)
+    const dedupeByUrl = (items: MetadataRoute.Sitemap) => {
+        const seen = new Set<string>();
+        return items.filter((item) => {
+            if (seen.has(item.url)) return false;
+            seen.add(item.url);
+            return true;
+        });
+    };
+
+    const staticMapped: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
+        url: `${baseUrl}/${route}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly" as const,
+        priority: route === "" ? 1.0 : 0.8,
+    }));
+
+    const moduleMapped: MetadataRoute.Sitemap = moduleRoutes.map((route) => ({
+        url: `${baseUrl}/${route}`,
+        lastModified: new Date(),
+        changeFrequency: "weekly" as const,
+        priority: 0.7,
+    }));
+
+    return dedupeByUrl([...staticMapped, ...moduleMapped, ...articleRoutes]);
 }

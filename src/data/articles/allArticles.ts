@@ -1,7 +1,7 @@
 // data/articles/allArticles.ts
 import { batmanArticles } from "@/data/dc/batman/batmanArticles";
 import { supermanArticles } from "@/data/dc/superman/supermanArticles";
-import { mulherMaravilhaArticleArticles } from "@/data/dc/mulher-maravilha/mulherMaravilhaArticles";
+import { mulherMaravilhaArticles } from "@/data/dc/mulher-maravilha/mulherMaravilhaArticles";
 
 export type ArticleListItem = {
     id: number;
@@ -16,7 +16,7 @@ export type ArticleListItem = {
 export const allArticles: ArticleListItem[] = [
     ...batmanArticles,
     ...supermanArticles,
-    ...mulherMaravilhaArticleArticles,
+    ...mulherMaravilhaArticles,
 ];
 
 export function getLatestArticles(limit = 8): ArticleListItem[] {
