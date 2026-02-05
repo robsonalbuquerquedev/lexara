@@ -55,25 +55,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "curiosidades/numeros-recordes-impacto",
     ];
 
-    // ✅ Artigos dinâmicos via data layer
+    // ✅ Artigos dinâmicos via data layer (+ imagens)
     const articleRoutes: MetadataRoute.Sitemap = allArticles
         .filter((a) => !!a.href)
         .map((a) => {
-            // garante URL absoluta (se href já vier absoluto, mantém)
             const url = a.href.startsWith("http")
                 ? a.href
                 : `${baseUrl}${a.href.startsWith("/") ? "" : "/"}${a.href}`;
 
-            // se tiver publishedAtISO, usa como lastModified (melhor que new Date())
             const lastModified = a.publishedAtISO ? new Date(a.publishedAtISO) : new Date();
+
+            // ✅ image sitemap: Next espera string[]
+            const images = a.ogImagePath
+                ? [`${baseUrl}${a.ogImagePath.startsWith("/") ? "" : "/"}${a.ogImagePath}`]
+                : undefined;
 
             return {
                 url,
                 lastModified,
                 changeFrequency: "monthly" as const,
                 priority: 0.6,
+                images,
             };
         });
+
 
     // ✅ Remove duplicadas (caso algum href bata com moduleRoutes no futuro)
     const dedupeByUrl = (items: MetadataRoute.Sitemap) => {

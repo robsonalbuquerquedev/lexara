@@ -11,6 +11,7 @@ export type ArticleListItem = {
     category: string;
     href: string;
     publishedAtISO?: string;
+    ogImagePath?: string;
 };
 
 export const allArticles: ArticleListItem[] = [
