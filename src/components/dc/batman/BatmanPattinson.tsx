@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Script from "next/script";
-import { ArrowRight, Film, List, Quote, Shield, Search, Sparkles, Skull, Map, BadgeCheck, } from "lucide-react";
+import { Film, List, Quote, Shield, Search, Skull, Map, BadgeCheck, } from "lucide-react";
 import ArticleMeta from "@/components/article/ArticleMeta";
 import ArticleCover from "@/components/article/ArticleCover";
 import ArticleVideo from "@/components/article/ArticleVideo";
+import { ContinueNoLexara } from "@/components/ContinueNoLexara";
 import { breadcrumbItem } from "@/lib/schema";
 import type { Article } from "@/content/article";
 
@@ -452,53 +453,32 @@ export default function BatmanPattinson({ article }: BatmanPattinsonProps) {
                     </p>
 
                     {/* CTA interno — sequência editorial Batman (Pattinson) */}
-                    <div className="not-prose my-12 rounded-2xl border border-slate-800 bg-slate-950/40 p-6">
-                        <p className="text-sm font-semibold text-slate-100 flex items-center gap-2">
-                            <Sparkles size={16} /> Continue no LEXARA
-                        </p>
-
-                        <p className="mt-2 text-sm text-slate-300">
-                            Se este texto foi seu ponto de partida, o caminho mais natural é voltar uma casa para comparar abordagens
-                            — e então seguir para o que vem pela frente no DCU.
-                        </p>
-
-                        <div className="mt-4 flex flex-wrap gap-3">
-                            <Link
-                                href="/filmes-series/dc/batman/batman-ben-affleck"
-                                className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950 hover:opacity-90"
-                            >
-                                Voltar: Batman de Ben Affleck <ArrowRight size={16} />
-                            </Link>
-
-                            <Link
-                                href="/filmes-series/dc/batman/batman-evolucao"
-                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                            >
-                                Ler: evolução do Batman no cinema <ArrowRight size={16} />
-                            </Link>
-
-                            <Link
-                                href="/filmes-series/dc/batman/batman-dcu-futuro"
-                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                            >
-                                Próximo: o futuro do Batman no DCU <ArrowRight size={16} />
-                            </Link>
-
-                            <Link
-                                href="/filmes-series/dc/batman"
-                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                            >
-                                Ver a seção Batman <ArrowRight size={16} />
-                            </Link>
-
-                            <Link
-                                href="/filmes-series/dc"
-                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                            >
-                                Explorar o hub DC <ArrowRight size={16} />
-                            </Link>
-                        </div>
-                    </div>
+                    <ContinueNoLexara
+                        description="Se este texto foi seu ponto de partida, o caminho mais natural é voltar uma casa para comparar abordagens — e então seguir para o que vem pela frente no DCU."
+                        links={[
+                            {
+                                href: "/filmes-series/dc/batman/batman-ben-affleck",
+                                label: "Voltar: Batman de Ben Affleck",
+                                primary: true,
+                            },
+                            {
+                                href: "/filmes-series/dc/batman/batman-evolucao",
+                                label: "Ler: evolução do Batman no cinema",
+                            },
+                            {
+                                href: "/filmes-series/dc/batman/batman-dcu-futuro",
+                                label: "Próximo: o futuro do Batman no DCU",
+                            },
+                            {
+                                href: "/filmes-series/dc/batman",
+                                label: "Ver a seção Batman",
+                            },
+                            {
+                                href: "/filmes-series/dc",
+                                label: "Explorar o hub DC",
+                            },
+                        ]}
+                    />
 
                     <h2
                         id="fontes"
