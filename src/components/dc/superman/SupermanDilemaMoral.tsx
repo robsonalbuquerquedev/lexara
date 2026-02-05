@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Script from "next/script";
-import { ArrowRight, Film, List, Quote, Shield } from "lucide-react";
+import { Film, List, Quote, Shield } from "lucide-react";
 import ArticleMeta from "@/components/article/ArticleMeta";
 import ArticleCover from "@/components/article/ArticleCover";
 import ArticleVideo from "@/components/article/ArticleVideo";
+import { ContinueNoLexara } from "@/components/ContinueNoLexara";
 import { breadcrumbItem } from "@/lib/schema";
 import type { Article } from "@/content/article";
 
@@ -414,53 +415,32 @@ export default function SupermanDilemaMoral({ article }: SupermanDilemaMoralProp
                     </p>
 
                     {/* CTA interno — sequência editorial Superman (Dilema moral) */}
-                    <div className="not-prose my-12 rounded-2xl border border-slate-800 bg-slate-950/40 p-6">
-                        <p className="text-sm font-semibold text-slate-100">
-                            Continue no LEXARA
-                        </p>
-
-                        <p className="mt-2 text-sm text-slate-300">
-                            Se este texto foi seu ponto de partida, vale voltar um passo para comparar versões e decisões de tom
-                            — e então seguir para o que muda quando o DCU entra em cena.
-                        </p>
-
-                        <div className="mt-4 flex flex-wrap gap-3">
-                            <Link
-                                href="/filmes-series/dc/superman/superman-versoes-cinema"
-                                className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950 hover:opacity-90"
-                            >
-                                Voltar: versões do Superman <ArrowRight size={16} />
-                            </Link>
-
-                            <Link
-                                href="/filmes-series/dc/superman/superman-esperanca-cinema"
-                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                            >
-                                Ler: esperança no cinema <ArrowRight size={16} />
-                            </Link>
-
-                            <Link
-                                href="/filmes-series/dc/superman/superman-dcu-futuro"
-                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                            >
-                                Próximo: o futuro do Superman no DCU <ArrowRight size={16} />
-                            </Link>
-
-                            <Link
-                                href="/filmes-series/dc/superman"
-                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                            >
-                                Ver a seção Superman <ArrowRight size={16} />
-                            </Link>
-
-                            <Link
-                                href="/filmes-series/dc"
-                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                            >
-                                Explorar o hub DC <ArrowRight size={16} />
-                            </Link>
-                        </div>
-                    </div>
+                    <ContinueNoLexara
+                        description="Se este texto foi seu ponto de partida, vale voltar um passo para comparar versões e decisões de tom — e então seguir para o que muda quando o DCU entra em cena."
+                        links={[
+                            {
+                                href: "/filmes-series/dc/superman/superman-versoes-cinema",
+                                label: "Voltar: versões do Superman",
+                                primary: true,
+                            },
+                            {
+                                href: "/filmes-series/dc/superman/superman-esperanca-cinema",
+                                label: "Ler: esperança no cinema",
+                            },
+                            {
+                                href: "/filmes-series/dc/superman/superman-dcu-futuro",
+                                label: "Próximo: o futuro do Superman no DCU",
+                            },
+                            {
+                                href: "/filmes-series/dc/superman",
+                                label: "Ver a seção Superman",
+                            },
+                            {
+                                href: "/filmes-series/dc",
+                                label: "Explorar o hub DC",
+                            },
+                        ]}
+                    />
 
                     <h2
                         id="fontes"
