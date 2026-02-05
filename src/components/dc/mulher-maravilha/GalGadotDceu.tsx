@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Script from "next/script";
-import { ArrowRight, Film, List, Quote, Shield } from "lucide-react";
+import { Film, List, Quote, Shield } from "lucide-react";
 import ArticleMeta from "@/components/article/ArticleMeta";
 import ArticleCover from "@/components/article/ArticleCover";
 import ArticleVideo from "@/components/article/ArticleVideo";
+import { ContinueNoLexara } from "@/components/ContinueNoLexara";
 import { breadcrumbItem } from "@/lib/schema";
 import type { Article } from "@/content/article";
 
@@ -430,50 +431,33 @@ export default function GalGadotDceu({ article }: GalGadotDceuProps) {
                         DCEU, é clara como poucas: um ícone que marcou uma geração, mesmo quando o universo ao redor ainda buscava sua forma.
                     </p>
 
-                    <div className="not-prose my-12 rounded-2xl border border-slate-800 bg-slate-950/40 p-6">
-                        <p className="text-sm font-semibold text-slate-100">Continue no LEXARA</p>
-                        <p className="mt-2 text-sm text-slate-300">
-                            Se este texto foi seu ponto de partida, o caminho mais natural é voltar aos filmes &quot;solo&quot; para ver a Diana em camadas
-                            diferentes — e depois seguir para o que vem pela frente no DCU.
-                        </p>
-
-                        <div className="mt-4 flex flex-wrap gap-3">
-                            <Link
-                                href="/filmes-series/dc/mulher-maravilha/mulher-maravilha-2017"
-                                className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950 hover:opacity-90"
-                            >
-                                Voltar: Mulher-Maravilha (2017) <ArrowRight size={16} />
-                            </Link>
-
-                            <Link
-                                href="/filmes-series/dc/mulher-maravilha/mulher-maravilha-1984"
-                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                            >
-                                Ler: Mulher-Maravilha 1984 <ArrowRight size={16} />
-                            </Link>
-
-                            <Link
-                                href="/filmes-series/dc/mulher-maravilha/mulher-maravilha-futuro-dcu"
-                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                            >
-                                Próximo: Futuro da personagem no DCU <ArrowRight size={16} />
-                            </Link>
-
-                            <Link
-                                href="/filmes-series/dc/mulher-maravilha"
-                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                            >
-                                Ver a seção Mulher-Maravilha <ArrowRight size={16} />
-                            </Link>
-
-                            <Link
-                                href="/filmes-series/dc"
-                                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                            >
-                                Explorar o hub DC <ArrowRight size={16} />
-                            </Link>
-                        </div>
-                    </div>
+                    {/* CTA interno — sequência editorial Mulher-Maravilha */}
+                    <ContinueNoLexara
+                        description="Se este texto foi seu ponto de partida, o caminho mais natural é voltar aos filmes &quot;solo&quot; para ver a Diana em camadas diferentes — e depois seguir para o que vem pela frente no DCU."
+                        links={[
+                            {
+                                href: "/filmes-series/dc/mulher-maravilha/mulher-maravilha-2017",
+                                label: "Voltar: Mulher-Maravilha (2017)",
+                                primary: true,
+                            },
+                            {
+                                href: "/filmes-series/dc/mulher-maravilha/mulher-maravilha-1984",
+                                label: "Ler: Mulher-Maravilha 1984",
+                            },
+                            {
+                                href: "/filmes-series/dc/mulher-maravilha/mulher-maravilha-futuro-dcu",
+                                label: "Próximo: Futuro da personagem no DCU",
+                            },
+                            {
+                                href: "/filmes-series/dc/mulher-maravilha",
+                                label: "Ver a seção Mulher-Maravilha",
+                            },
+                            {
+                                href: "/filmes-series/dc",
+                                label: "Explorar o hub DC",
+                            },
+                        ]}
+                    />
 
                     <h2
                         id="fontes"
