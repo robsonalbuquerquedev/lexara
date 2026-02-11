@@ -2,6 +2,7 @@
 import { batmanArticles } from "@/data/dc/batman/batmanArticles";
 import { supermanArticles } from "@/data/dc/superman/supermanArticles";
 import { mulherMaravilhaArticles } from "@/data/dc/mulher-maravilha/mulherMaravilhaArticles";
+import { homemDeFerroArticles } from "@/data/marvel/homem-de-ferro/homemDeFerroArticles";
 
 export type ArticleListItem = {
     id: number;
@@ -18,6 +19,7 @@ export const allArticles: ArticleListItem[] = [
     ...batmanArticles,
     ...supermanArticles,
     ...mulherMaravilhaArticles,
+    ...homemDeFerroArticles,
 ];
 
 export function getLatestArticles(limit = 8): ArticleListItem[] {
