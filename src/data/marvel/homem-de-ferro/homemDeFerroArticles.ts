@@ -29,16 +29,16 @@ export const homemDeFerroArticles: HomemDeFerroArticle[] = [
         href: "/filmes-series/marvel/homem-de-ferro/tony-stark-personagem",
         publishedAtISO: "2026-02-11T15:30:00-03:00",
     },
-    // {
-    //     id: 3,
-    //     title: "Homem de Ferro 2 e 3: quando o tom do MCU começa a mudar",
-    //     excerpt:
-    //         "Sequências que ampliam o universo, mas também revelam limites criativos. Uma leitura crítica sobre como o MCU ajusta seu tom entre espetáculo, humor e drama pessoal.",
-    //     image: "/images/featured/marvel/homem-de-ferro/homem-de-ferro-2-3.png",
-    //     category: "Filmes & Séries",
-    //     href: "/filmes-series/marvel/homem-de-ferro/2-e-3-evolucao-mcu",
-    //     publishedAtISO: "2026-02-10T09:00:00-03:00",
-    // },
+    {
+        id: 3,
+        title: "Homem de Ferro 2 e 3: quando o tom do MCU começa a mudar",
+        excerpt:
+            "Sequências que ampliam o universo, mas também revelam limites criativos. Uma leitura crítica sobre como o MCU ajusta seu tom entre espetáculo, humor e drama pessoal.",
+        image: "/images/featured/marvel/homem-de-ferro/homem-de-ferro-2-3.png",
+        category: "Filmes & Séries",
+        href: "/filmes-series/marvel/homem-de-ferro/2-e-3-evolucao-mcu",
+        publishedAtISO: "2026-02-11T19:30:00-03:00",
+    },
     // {
     //     id: 4,
     //     title: "O legado do Homem de Ferro: por que Tony Stark é o coração do MCU",
