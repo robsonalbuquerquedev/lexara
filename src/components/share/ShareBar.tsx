@@ -93,11 +93,11 @@ export default function ShareBar({
             <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
                 <div>
                     <p className="text-sm font-semibold text-slate-100">
-                        Este artigo fez sentido para você?
+                        Este conteúdo fez sentido para você?
                     </p>
                     <p className="mt-2 text-sm text-slate-300">
-                        Compartilhe com outros fãs da DC. Um simples link ajuda a levar essa leitura
-                        para quem também gosta de análise, contexto e boas histórias.
+                        Compartilhe com outros leitores. Um simples link ajuda a espalhar análises,
+                        contexto e boas histórias — seja sobre cinema, séries, games, HQs ou cultura pop.
                     </p>
                 </div>
 
