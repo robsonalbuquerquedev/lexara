@@ -9,16 +9,16 @@ export type CapitaoAmericaArticle = {
 };
 
 export const capitaoAmericaArticles: CapitaoAmericaArticle[] = [
-    // {
-    //     id: 1,
-    //     title: "Capitão América: O Primeiro Vingador e o nascimento do símbolo",
-    //     excerpt:
-    //         "Criado como propaganda de guerra, Steve Rogers começa como um ideal absoluto. Uma análise de como o MCU transforma um símbolo patriótico em personagem trágico.",
-    //     image: "/images/featured/marvel/capitao-america/capitao-america-primeiro-vingador.png",
-    //     category: "Filmes & Séries",
-    //     href: "/filmes-series/marvel/capitao-america/o-primeiro-vingador-simbolo",
-    //     publishedAtISO: "2026-02-10T09:00:00-03:00",
-    // },
+    {
+        id: 1,
+        title: "Capitão América: O Primeiro Vingador e o nascimento do símbolo",
+        excerpt:
+            "Criado como propaganda de guerra, Steve Rogers começa como um ideal absoluto. Uma análise de como o MCU transforma um símbolo patriótico em personagem trágico.",
+        image: "/images/featured/marvel/capitao-america/capitao-america-primeiro-vingador.png",
+        category: "Filmes & Séries",
+        href: "/filmes-series/marvel/capitao-america/o-primeiro-vingador-simbolo",
+        publishedAtISO: "2026-02-12T14:45:00-03:00",
+    },
     // {
     //     id: 2,
     //     title: "Entre propaganda e ideal: a culpa histórica do Capitão América",
