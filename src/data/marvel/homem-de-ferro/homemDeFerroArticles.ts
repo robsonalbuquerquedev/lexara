@@ -39,14 +39,14 @@ export const homemDeFerroArticles: HomemDeFerroArticle[] = [
         href: "/filmes-series/marvel/homem-de-ferro/2-e-3-evolucao-mcu",
         publishedAtISO: "2026-02-11T19:30:00-03:00",
     },
-    // {
-    //     id: 4,
-    //     title: "O legado do Homem de Ferro: por que Tony Stark é o coração do MCU",
-    //     excerpt:
-    //         "Do primeiro reator ao sacrifício final, Tony Stark moldou o MCU em narrativa, tom e emoção. Entenda por que o universo Marvel nunca mais foi o mesmo depois dele.",
-    //     image: "/images/featured/marvel/homem-de-ferro/legado-tony-stark.png",
-    //     category: "Filmes & Séries",
-    //     href: "/filmes-series/marvel/homem-de-ferro/legado-tony-stark-mcu",
-    //     publishedAtISO: "2026-02-10T09:00:00-03:00",
-    // },
+    {
+        id: 4,
+        title: "O legado do Homem de Ferro: por que Tony Stark é o coração do MCU",
+        excerpt:
+            "Do primeiro reator ao sacrifício final, Tony Stark moldou o MCU em narrativa, tom e emoção. Entenda por que o universo Marvel nunca mais foi o mesmo depois dele.",
+        image: "/images/featured/marvel/homem-de-ferro/legado-tony-stark.png",
+        category: "Filmes & Séries",
+        href: "/filmes-series/marvel/homem-de-ferro/legado-tony-stark-mcu",
+        publishedAtISO: "2026-02-12T08:00:00-03:00",
+    },
 ];
