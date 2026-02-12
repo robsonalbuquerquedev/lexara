@@ -29,16 +29,16 @@ export const capitaoAmericaArticles: CapitaoAmericaArticle[] = [
         href: "/filmes-series/marvel/capitao-america/culpa-historica-e-ideal",
         publishedAtISO: "2026-02-12T19:00:00-03:00",
     },
-    // {
-    //     id: 3,
-    //     title: "O Soldado Invernal: quando o herói entra em guerra com o sistema",
-    //     excerpt:
-    //         "Espionagem, paranoia e escolhas morais difíceis. Uma leitura crítica de como O Soldado Invernal redefine o tom político do MCU.",
-    //     image: "/images/featured/marvel/capitao-america/soldado-invernal-critica.png",
-    //     category: "Filmes & Séries",
-    //     href: "/filmes-series/marvel/capitao-america/o-soldado-invernal-analise",
-    //     publishedAtISO: "2026-02-10T09:00:00-03:00",
-    // },
+    {
+        id: 3,
+        title: "O Soldado Invernal: quando o herói entra em guerra com o sistema",
+        excerpt:
+            "Espionagem, paranoia e escolhas morais difíceis. Uma leitura crítica de como O Soldado Invernal redefine o tom político do MCU.",
+        image: "/images/featured/marvel/capitao-america/soldado-invernal-critica.png",
+        category: "Filmes & Séries",
+        href: "/filmes-series/marvel/capitao-america/o-soldado-invernal-analise",
+        publishedAtISO: "2026-02-12T21:30:00-03:00",
+    },
     // {
     //     id: 4,
     //     title: "Guerra Civil: o Capitão América e o preço de fazer a escolha certa",
