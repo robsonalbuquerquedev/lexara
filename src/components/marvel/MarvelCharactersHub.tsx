@@ -22,7 +22,7 @@ const MARVEL_CHARACTERS: CharacterHubItem[] = [
         image: "/images/featured/marvel/homem-de-ferro/iron-man.png",
         badge: "Seção especial",
         icon: <Shield size={18} />,
-        status: "Em breve",
+        status: "Pronto",
     },
     {
         title: "Capitão América",
@@ -30,9 +30,9 @@ const MARVEL_CHARACTERS: CharacterHubItem[] = [
             "O símbolo em guerra com o próprio símbolo. Compare ideal, propaganda, culpa histórica e escolhas morais — do “soldado perfeito” ao líder fraturado.",
         href: "/filmes-series/marvel/capitao-america",
         image: "/images/featured/marvel/capitao-america/captain-america.png",
-        badge: "Em Construção",
-        icon: <Sparkles size={18} />,
-        status: "Em breve",
+        badge: "Seção especial",
+        icon: <Shield size={18} />,
+        status: "Pronto",
     },
     {
         title: "Thor",
