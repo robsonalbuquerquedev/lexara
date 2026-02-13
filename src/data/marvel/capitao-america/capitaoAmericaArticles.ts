@@ -39,14 +39,14 @@ export const capitaoAmericaArticles: CapitaoAmericaArticle[] = [
         href: "/filmes-series/marvel/capitao-america/o-soldado-invernal-analise",
         publishedAtISO: "2026-02-12T21:30:00-03:00",
     },
-    // {
-    //     id: 4,
-    //     title: "Guerra Civil: o Capitão América e o preço de fazer a escolha certa",
-    //     excerpt:
-    //         "Quando obedecer deixa de ser moralmente aceitável, o símbolo se parte. Uma análise sobre liderança, lealdade e ruptura no coração do MCU.",
-    //     image: "/images/featured/marvel/capitao-america/guerra-civil-escolhas-morais.png",
-    //     category: "Filmes & Séries",
-    //     href: "/filmes-series/marvel/capitao-america/guerra-civil-escolhas",
-    //     publishedAtISO: "2026-02-10T09:00:00-03:00",
-    // },
+    {
+        id: 4,
+        title: "Guerra Civil: o Capitão América e o preço de fazer a escolha certa",
+        excerpt:
+            "Quando obedecer deixa de ser moralmente aceitável, o símbolo se parte. Uma análise sobre liderança, lealdade e ruptura no coração do MCU.",
+        image: "/images/featured/marvel/capitao-america/guerra-civil-escolhas-morais.png",
+        category: "Filmes & Séries",
+        href: "/filmes-series/marvel/capitao-america/guerra-civil-escolhas",
+        publishedAtISO: "2026-02-13T07:00:00-03:00",
+    },
 ];
