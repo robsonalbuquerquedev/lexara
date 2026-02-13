@@ -40,9 +40,9 @@ const MARVEL_CHARACTERS: CharacterHubItem[] = [
             "Mito, família e humor como ferramenta dramática. Veja como o personagem muda de registro (épico → trágico → cômico) sem perder o coração da jornada.",
         href: "/filmes-series/marvel/thor",
         image: "/images/featured/marvel/thor/thor.png",
-        badge: "Em Construção",
-        icon: <Sparkles size={18} />,
-        status: "Em breve",
+        badge: "Seção especial",
+        icon: <Shield size={18} />,
+        status: "Pronto",
     },
 ];
 
