@@ -82,7 +82,7 @@ export default function DcMulherMaravilhaPage() {
             header={
                 <BackButton
                     fallbackHref="/filmes-series/dc"
-                    label="Voltar para Filmes & Séries"
+                    label="Voltar para Universo DC"
                     mode="fixed"
                 />
             }
