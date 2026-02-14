@@ -71,8 +71,8 @@ export default function CapitaoAmericaPage() {
         <CardLayout
             header={
                 <BackButton
-                    fallbackHref="/filmes-series"
-                    label="Voltar para Filmes & Séries"
+                    fallbackHref="/filmes-series/marvel"
+                    label="Voltar para Universo Marvel"
                 />
             }
         >
