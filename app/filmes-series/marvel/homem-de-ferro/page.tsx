@@ -73,8 +73,8 @@ export default function HomemDeFerroPage() {
         <CardLayout
             header={
                 <BackButton
-                    fallbackHref="/filmes-series"
-                    label="Voltar para Filmes & Séries"
+                    fallbackHref="/filmes-series/marvel"
+                    label="Voltar para Universo Marvel"
                 />
             }
         >
