@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Sparkles, Film, Shield } from "lucide-react";
+import StrategicHubBlock from "@/components/strategic/StrategicHubBlock";
+import UniverseFinalCTA from "@/components/strategic/UniverseFinalCTA";
 
 type CharacterHubItem = {
     title: string;
@@ -169,30 +171,38 @@ export default function MarvelCharactersHub() {
                 ))}
             </div>
 
-            {/* CTA final */}
-            <div className="rounded-2xl border border-slate-800 bg-slate-950/40 p-6">
-                <p className="text-sm font-semibold text-slate-100">Continue explorando</p>
-                <p className="mt-2 text-sm text-slate-300">
-                    A Marvel tem muitas portas de entrada. Comece por um personagem e siga pelos links internos para manter a
-                    leitura fluida no LEXARA.
-                </p>
+            {/* Bloco Estratégico — Hub Vingadores */}
+            <StrategicHubBlock
+                eyebrow="Evento Central do Universo Marvel"
+                title="Vingadores: O Eixo que Sustenta a Saga Marvel"
+                description="De Os Vingadores (2012) até Vingadores: Ultimato, a união dos heróis redefiniu o cinema e conectou jornadas individuais em uma única linha narrativa épica."
+                ctaLabel="Explorar o Hub Completo dos Vingadores"
+                href="/filmes-series/marvel/vingadores"
+                accentColor="indigo"
+            />
 
-                <div className="mt-4 flex flex-wrap gap-3">
-                    <Link
-                        href="/filmes-series/marvel"
-                        className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950 hover:opacity-90"
-                    >
-                        Ir para Marvel <ArrowRight size={16} />
-                    </Link>
-
-                    <Link
-                        href="/filmes-series"
-                        className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-950/20 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-900/30"
-                    >
-                        Voltar para Filmes & Séries <ArrowRight size={16} />
-                    </Link>
-                </div>
-            </div>
+            {/* CTA Final Estrutural */}
+            <UniverseFinalCTA
+                title="Continue explorando o Universo Marvel"
+                description="Aprofunde-se nos heróis centrais ou avance para o eixo que conecta toda a saga."
+                buttons={[
+                    {
+                        label: "Ir para Homem de Ferro",
+                        href: "/filmes-series/marvel/homem-de-ferro",
+                        variant: "primary",
+                    },
+                    {
+                        label: "Explorar Vingadores",
+                        href: "/filmes-series/marvel/vingadores",
+                        variant: "secondary",
+                    },
+                    {
+                        label: "Voltar para Filmes & Séries",
+                        href: "/filmes-series",
+                        variant: "secondary",
+                    },
+                ]}
+            />
         </section>
     );
 }
